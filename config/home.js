@@ -1,7 +1,11 @@
+import { siteImages } from "./images.js";
+
 export const heroData = {
-  title: ["OTELİNİZ İÇİN", "TEK PARTNER."],
+  titleLine1: "OTELİNİZ İÇİN",
+  titleLine2Prefix: "TEK TEKNOLOJİ VE",
+  titleLine2Accent: "ÇÖZÜM PARTNERİ.",
   subtitle:
-    "Teknolojiden tedariğe, yazılımdan operasyona. Otelinizin ihtiyaç duyduğu tüm çözümler tek çatı altında.",
+    "Kendi geliştirdiğimiz Hotelio platformu, dijital çözümler ve otel tedarik ağımızla uçtan uca hizmet sunuyoruz.",
   primaryCta: { label: "Çözümleri Keşfet", href: "/cozumler" },
   secondaryCta: { label: "Hotelio'yu İncele", href: "/hotelio" },
   trustTags: ["Teknoloji", "Yazılım", "Tedarik", "Operasyon", "Spa", "Dijital"],
@@ -105,8 +109,8 @@ export const servicesShowcase = {
       description:
         "Rezervasyon odaklı, hızlı ve SEO uyumlu web deneyimleri. Markanızı dijitalde prestijle temsil edin.",
       href: "/cozumler/otel-web-sitesi",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80",
+      ctaLabel: "Detayları İncele",
+      image: siteImages.solutions.web,
       size: "large",
     },
     {
@@ -115,8 +119,8 @@ export const servicesShowcase = {
       description:
         "Marka dili, içerik stratejisi ve misafir etkileşimi ile otelinizin dijital görünürlüğünü güçlendirin.",
       href: "/cozumler/sosyal-medya",
-      image:
-        "https://images.unsplash.com/photo-1432888622747-4ebee0e2b236?w=900&q=80",
+      ctaLabel: "Detayları İncele",
+      image: siteImages.solutions.social,
       size: "medium",
     },
     {
@@ -125,38 +129,38 @@ export const servicesShowcase = {
       description:
         "Güvenli geçiş, oda erişimi ve operasyonel kontrol için kurumsal kapı sistemi çözümleri.",
       href: "/cozumler/kapi-sistemleri",
-      image:
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
+      ctaLabel: "Teklif İste",
+      image: siteImages.solutions.doors,
       size: "medium",
     },
     {
       id: "textile",
-      title: "Otel Tekstili",
+      title: "Otel Tekstili / Tedarik",
       description:
         "Nevresim, havlu, bornoz ve tekstil tedarikinde kalite, dayanıklılık ve marka uyumu.",
-      href: "/cozumler/otel-tekstili",
-      image:
-        "https://images.unsplash.com/photo-1611892440504-42a784e68306?w=900&q=80",
+      href: "/tedarik",
+      ctaLabel: "Talep Oluştur",
+      image: siteImages.solutions.textile,
       size: "large",
     },
     {
       id: "supplies",
-      title: "Sarf ve Temizlik Malzemeleri",
+      title: "Sarf ve Temizlik Tedariki",
       description:
         "Housekeeping ve günlük operasyon için sürdürülebilir, maliyet-etkin tedarik çözümleri.",
-      href: "/cozumler/sarf-temizlik",
-      image:
-        "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=900&q=80",
+      href: "/tedarik",
+      ctaLabel: "Talep Oluştur",
+      image: siteImages.solutions.cleaning,
       size: "medium",
     },
     {
       id: "spa",
-      title: "SPA Kurulumu",
+      title: "SPA Kurulum ve Danışmanlık",
       description:
         "Wellness alanı planlaması, ekipman seçimi ve devreye alma sürecinde uçtan uca destek.",
       href: "/cozumler/spa-kurulumu",
-      image:
-        "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80",
+      ctaLabel: "Teklif İste",
+      image: siteImages.solutions.spa,
       size: "large",
     },
   ],
@@ -171,49 +175,46 @@ export const hotelAreas = {
       id: "reception",
       name: "Resepsiyon",
       solutions: ["Hotelio", "Kartlı Kapı Sistemi"],
-      position: { top: "18%", left: "42%" },
     },
     {
       id: "rooms",
       name: "Odalar",
       solutions: ["Tekstil", "Sarf Ürünleri"],
-      position: { top: "35%", left: "68%" },
     },
     {
       id: "housekeeping",
       name: "Housekeeping",
       solutions: ["Sarf Malzemeleri", "Temizlik Ürünleri"],
-      position: { top: "55%", left: "25%" },
     },
     {
       id: "restaurant",
       name: "Restoran",
       solutions: ["Operasyon Yönetimi", "Tedarik"],
-      position: { top: "48%", left: "55%" },
     },
     {
       id: "spa",
       name: "SPA",
       solutions: ["SPA Kurulumu", "Hotelio SPA Yönetimi"],
-      position: { top: "72%", left: "70%" },
     },
     {
       id: "management",
       name: "Yönetim",
       solutions: ["Hotelio", "Raporlama"],
-      position: { top: "22%", left: "78%" },
     },
     {
       id: "digital",
       name: "Dijital",
       solutions: ["Web Sitesi", "Sosyal Medya"],
-      position: { top: "65%", left: "45%" },
+    },
+    {
+      id: "procurement",
+      name: "Satın Alma",
+      solutions: ["Tedarik Talebi", "Teklif Yönetimi"],
     },
     {
       id: "security",
       name: "Güvenlik",
       solutions: ["Kapı Sistemleri", "Erişim Kontrolü"],
-      position: { top: "38%", left: "15%" },
     },
   ],
 };
@@ -262,45 +263,16 @@ export const whyUs = {
 };
 
 export const projects = {
-  title: "Çözümlerimizi Sahada Görün",
-  subtitle:
-    "Otel projelerinde uyguladığımız çözümler yakında bu alanda paylaşılacak.",
-  items: [
-    {
-      id: 1,
-      name: "Referans Proje",
-      city: "Proje Yakında",
-      service: "Hotelio + Kapı Sistemleri",
-      image:
-        "https://images.unsplash.com/photo-1564501049412-61c781a8e591?w=800&q=85&fit=crop",
-      href: "/projeler",
-    },
-    {
-      id: 2,
-      name: "Referans Proje",
-      city: "Proje Yakında",
-      service: "Web Sitesi + Sosyal Medya",
-      image:
-        "https://images.unsplash.com/photo-1618773994803-cc1139f1f1bf?w=800&q=85&fit=crop",
-      href: "/projeler",
-    },
-    {
-      id: 3,
-      name: "Referans Proje",
-      city: "Proje Yakında",
-      service: "Tekstil + Sarf Malzemeleri",
-      image:
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-      href: "/projeler",
-    },
-  ],
+  enabled: false,
+  title: "Referans Projelerimiz",
+  subtitle: "Otel projelerinde uyguladığımız çözümler.",
+  items: [],
 };
 
 export const finalCta = {
   title: "Oteliniz İçin Doğru Çözümü Birlikte Belirleyelim.",
   description:
-    "Yeni otel kurulumu, mevcut işletmenin dijital dönüşümü veya tedarik ihtiyaçlarınız için ekibimizle görüşün.",
+    "Teknolojiden tedarike, dijital çözümlerden operasyonel ihtiyaçlara kadar oteliniz için doğru modeli birlikte oluşturalım.",
   primaryCta: { label: "Teklif Al", href: "/teklif-al" },
-  secondaryCta: { label: "WhatsApp'tan Görüş", href: "whatsapp" },
-  hotelioCta: { label: "Hotelio Demo Talep Et", href: "/hotelio-demo" },
+  secondaryCta: { label: "Hotelio Demo Talep Et", href: "/hotelio-demo" },
 };

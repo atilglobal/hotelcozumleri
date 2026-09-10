@@ -2,7 +2,7 @@ export const mainNavigation = [
   { label: "Ana Sayfa", href: "/" },
   { label: "Hotelio", href: "/hotelio" },
   { label: "Çözümler", href: "/cozumler", megaMenu: true },
-  { label: "Ürünler", href: "/urunler" },
+  { label: "Tedarik", href: "/tedarik" },
   { label: "Projeler", href: "/projeler" },
   { label: "Blog", href: "/blog" },
   { label: "Hakkımızda", href: "/hakkimizda" },
@@ -19,11 +19,10 @@ export const footerSolutions = [
   { label: "SPA", href: "/cozumler/spa-kurulumu" },
 ];
 
-export const footerShop = [
-  { label: "Ürünler", href: "/urunler" },
-  { label: "Sepet", href: "/sepet" },
-  { label: "Teklif Sepeti", href: "/teklif-sepeti" },
-  { label: "Hesabım", href: "/hesabim" },
+export const footerTedarik = [
+  { label: "Tedarik Merkezi", href: "/tedarik" },
+  { label: "Tedarik Talebi", href: "/tedarik#talep-formu" },
+  { label: "Teklif Al", href: "/teklif-al" },
 ];
 
 export const footerCorporate = [
@@ -46,5 +45,15 @@ export const footerLegal = [
 export const ctaLinks = {
   teklif: "/teklif-al",
   hotelioDemo: "/hotelio-demo",
+  tedarik: "/tedarik#talep-formu",
   whatsapp: "/iletisim",
 };
+
+/** E-ticaret rotaları — frontend'den kaldırıldı, yönlendirme için */
+export const deprecatedShopRoutes = [
+  "/urunler",
+  "/sepet",
+  "/teklif-sepeti",
+  "/kategori",
+  "/odeme",
+];

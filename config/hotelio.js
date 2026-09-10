@@ -259,15 +259,120 @@ export const hotelioDepartments = [
 ];
 
 export const hotelioDemoInterests = [
-  "Yönetim",
+  "Hotelio AI",
   "Rezervasyon",
   "Ön Büro",
   "CRM",
-  "Finans",
-  "Housekeeping",
+  "Finans & Raporlama",
   "SPA",
-  "Tüm Sistem",
+  "Genel Platform Tanıtımı",
 ];
+
+export const hotelioAI = {
+  eyebrow: "HOTELIO AI",
+  badgeTagline: "Otelcilik Odaklı Yapay Zekâ",
+  badgeQuote: "Otelcilik için düşünüyor.",
+  titleLine1: "OTELCİLİĞİ DÜŞÜNEN",
+  titleLine2: "YAPAY ZEKÂ.",
+  description:
+    "Hotelio'nun yapay zekâ asistanı, genel amaçlı bir sohbet deneyimi yerine otelcilik odağında tasarlanmıştır. Otel operasyonlarıyla ilgili sorularınızı ve ihtiyaçlarınızı otelcilik perspektifinden ele alır.",
+  focusTitle: "Tek Bir Odağı Var: Otelcilik.",
+  focusSubtitle:
+    "Aşağıdaki alanlar, asistanın otelcilik bağlamında yönlendirme yaptığı bilgi alanlarını temsil eder.",
+  focusAreas: [
+    "Rezervasyon",
+    "Ön Büro",
+    "Operasyon",
+    "Misafir İlişkileri",
+    "CRM",
+    "Finans",
+    "Raporlama",
+    "SPA",
+  ],
+  comparison: {
+    general: {
+      title: "Genel Amaçlı Asistan",
+      text: "Her konuda yardımcı olmaya çalışır.",
+    },
+    hotelio: {
+      title: "Hotelio AI",
+      text: "Otelcilik odağında düşünür.",
+    },
+    footnote:
+      "Otel operasyonlarının diliyle iletişim kurmak üzere otelcilik kullanım senaryolarına odaklanmıştır.",
+  },
+  demoTitle: "Hotelio AI'a Sorun.",
+  demoNote: "Tanıtım demonstrasyonu — gerçek AI API çağrısı yapılmaz.",
+  orbitCaption: "Otelcilik odağında geliştirilen yapay zekâ deneyimi.",
+  ctas: {
+    primary: { label: "Hotelio Demo Talep Et", href: "/hotelio#hotelio-demo" },
+    secondary: { label: "Hotelio'yu İncele", href: "/hotelio" },
+  },
+  promptChips: [
+    "Ön büro operasyonunu nasıl iyileştirebilirim?",
+    "Misafir memnuniyetini artırmak için nelere dikkat etmeliyim?",
+    "Rezervasyon süreçlerinde hangi metrikler önemlidir?",
+    "SPA operasyonunda hangi noktaları takip etmeliyim?",
+    "Oda değişimini nasıl yaparım?",
+    "Bugün ön büroda nelere dikkat etmeliyim?",
+  ],
+  conversations: [
+    {
+      id: "front-office-today",
+      prompt: "Bugün ön büroda nelere dikkat etmeliyim?",
+      response:
+        "Ön büro gününde check-in ve check-out akışı, misafir talepleri ile oda durumu koordinasyonu önceliklidir. Hotelio AI, bu başlıklarda otelcilik perspektifinden yönlendirme sunar ve ilgili modüllere nasıl ilerleyeceğinizi adım adım açıklar.",
+    },
+    {
+      id: "occupancy",
+      prompt: "Doluluk durumunu değerlendir.",
+      response:
+        "Doluluk değerlendirmesi için Hotelio raporlama ve yönetici dashboard ekranlarını incelemenizi öneririm. Size bu ekranlara nasıl ulaşacağınızı ve hangi metriklere bakmanız gerektiğini otelcilik odağında anlatabilirim.",
+    },
+    {
+      id: "weekly-ops",
+      prompt: "Bu hafta operasyon açısından neleri kontrol etmeliyim?",
+      response:
+        "Haftalık operasyon kontrolünde rezervasyon planlaması, housekeeping dağılımı ve misafir iletişim süreçleri temel başlıklardır. Hotelio AI, bu alanlarda otelcilik perspektifinden kontrol listesi ve yönlendirme sunar.",
+    },
+    {
+      id: "reports",
+      prompt: "Otel operasyonum için hangi raporları incelemeliyim?",
+      response:
+        "Finans, doluluk ve departman performansı raporları yönetim kararları için temel başlıklardır. Hotelio'da ilgili rapor ekranlarına erişim ve okuma sırası konusunda adım adım destek sunabilirim.",
+    },
+    {
+      id: "room-change",
+      prompt: "Oda değişimini nasıl yaparım?",
+      response:
+        "Rezervasyon kartını açın ve Oda Değişimi alanına ilerleyin. Yeni oda seçimini onayladıktan sonra sistem güncellemeyi tamamlar. İsterseniz bu adımları ekran ekran birlikte takip edebiliriz.",
+    },
+    {
+      id: "front-office-improve",
+      prompt: "Ön büro operasyonunu nasıl iyileştirebilirim?",
+      response:
+        "Ön büro verimliliği; check-in süresi, misafir karşılama standardı ve departmanlar arası bilgi akışıyla ilişkilidir. Hotelio AI, bu süreçlerde otelcilik perspektifinden iyileştirme önerileri ve platform içi yönlendirme sunar.",
+    },
+    {
+      id: "guest-satisfaction",
+      prompt: "Misafir memnuniyetini artırmak için nelere dikkat etmeliyim?",
+      response:
+        "Misafir memnuniyetinde kişiselleştirilmiş karşılama, hızlı talep çözümü ve tutarlı iletişim öne çıkar. CRM ve misafir tercih kartları gibi Hotelio modüllerini bu hedefe göre nasıl kullanacağınızı otelcilik odağında anlatabilirim.",
+    },
+    {
+      id: "reservation-metrics",
+      prompt: "Rezervasyon süreçlerinde hangi metrikler önemlidir?",
+      response:
+        "Rezervasyon planlamasında doluluk eğilimi, kanal dağılımı ve iptal/no-show oranları temel metriklerdir. Hotelio'da bu metrikleri hangi ekranlardan takip edebileceğinizi otelcilik perspektifinden açıklayabilirim.",
+    },
+    {
+      id: "spa-ops",
+      prompt: "SPA operasyonunda hangi noktaları takip etmeliyim?",
+      response:
+        "SPA operasyonunda terapist takvimi, randevu yoğunluğu ve oda hesabına aktarım süreçleri kritiktir. Hotelio SPA modülünde bu akışları nasıl yöneteceğinizi adım adım anlatabilirim.",
+    },
+  ],
+};
 
 export const hotelioFAQ = [
   {
@@ -284,6 +389,11 @@ export const hotelioFAQ = [
     question: "Hotelio hangi otel süreçlerini kapsar?",
     answer:
       "Rezervasyon ve satış, ön büro operasyonları, misafir deneyimi, finans ve muhasebe, oda ve tesis operasyonları, SPA yönetimi, raporlama ve yönetici karar desteği süreçlerini kapsar.",
+  },
+  {
+    question: "Hotelio AI nedir?",
+    answer:
+      "Hotelio AI, Hotelio platformu içinde çalışan otelcilik odaklı yapay zekâ asistanıdır. Genel amaçlı bir sohbet botu yerine otel operasyonları, platform kullanımı ve otelcilik senaryolarına odaklanarak personele yönlendirme sağlar.",
   },
   {
     question: "Demo talep edebilir miyim?",

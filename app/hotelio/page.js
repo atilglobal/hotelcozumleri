@@ -5,7 +5,7 @@ import { breadcrumbSchema, softwareApplicationSchema, JsonLd } from "@/lib/schem
 export const metadata = createMetadata({
   title: "Hotelio | Akıllı Otel Yönetim Yazılımı",
   description:
-    "Hotelio; rezervasyon, ön büro, misafir ilişkileri, finans, raporlama, housekeeping, SPA ve yönetim süreçlerini tek platformda birleştiren otel odaklı yönetim sistemidir.",
+    "Hotelio; rezervasyon, ön büro, misafir ilişkileri, finans, raporlama, housekeeping, SPA ve yönetim süreçlerini tek platformda birleştiren otel odaklı yönetim sistemidir. Otelcilik odaklı Hotelio AI asistanı ile platform içi yönlendirme.",
   path: "/hotelio",
 });
 

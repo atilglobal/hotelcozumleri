@@ -1,8 +1,7 @@
 import HotelioHero from "./HotelioHero";
 import HotelioWhySection from "./HotelioWhySection";
 import HotelioModuleNavigator from "./HotelioModuleNavigator";
-import HotelioAISection from "./HotelioAISection";
-import HotelioAssistantDemo from "./HotelioAssistantDemo";
+import HotelioAISectionPremium from "./HotelioAISectionPremium";
 import {
   HotelioExecutiveSection,
   HotelioReservationSection,
@@ -26,8 +25,6 @@ export default function HotelioLandingPage() {
       <HotelioHero />
       <HotelioWhySection />
       <HotelioModuleNavigator />
-      <HotelioAISection />
-      <HotelioAssistantDemo />
       <HotelioExecutiveSection />
       <HotelioReservationSection />
       <HotelioFrontOfficeSection />
@@ -35,6 +32,7 @@ export default function HotelioLandingPage() {
       <HotelioHousekeepingSection />
       <HotelioSpaCrossSection />
       <HotelioReportsSection />
+      <HotelioAISectionPremium variant="page" />
       <HotelioBenefits />
       <HotelioAudience />
       <HotelioDepartmentExplorer />

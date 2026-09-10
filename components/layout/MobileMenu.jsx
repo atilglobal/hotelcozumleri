@@ -79,7 +79,7 @@ export default function MobileMenu({ isOpen, onClose }) {
                         <button
                           type="button"
                           onClick={() => setSolutionsOpen(!solutionsOpen)}
-                          className="w-full flex items-center justify-between py-3 px-4 text-lg font-display text-white/90 hover:text-gold hover:bg-white/5 rounded-sm transition-colors"
+                          className="mobile-nav-link w-full flex items-center justify-between py-3 px-4 text-lg font-display hover:bg-white/5 rounded-sm transition-colors"
                           aria-expanded={solutionsOpen}
                         >
                           Çözümler
@@ -106,7 +106,7 @@ export default function MobileMenu({ isOpen, onClose }) {
                                   <Link
                                     href={solution.href}
                                     onClick={handleClose}
-                                    className="block py-2.5 px-4 text-sm text-white/70 hover:text-gold transition-colors"
+                                    className="mobile-nav-sublink block py-2.5 px-4 text-sm transition-colors"
                                   >
                                     {solution.label}
                                   </Link>
@@ -147,7 +147,7 @@ export default function MobileMenu({ isOpen, onClose }) {
                       <Link
                         href={item.href}
                         onClick={handleClose}
-                        className="block py-3 px-4 text-lg font-display text-white/90 hover:text-gold hover:bg-white/5 rounded-sm transition-colors"
+                        className="mobile-nav-link block py-3 px-4 text-lg font-display hover:bg-white/5 rounded-sm transition-colors"
                       >
                         {item.label}
                       </Link>

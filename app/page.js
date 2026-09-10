@@ -1,6 +1,7 @@
 import Hero from "@/components/home/Hero";
-import SolutionsOverview from "@/components/home/SolutionsOverview";
+import SolutionsHub from "@/components/home/SolutionsHub";
 import HotelioShowcase from "@/components/home/HotelioShowcase";
+import HotelioAIShowcase from "@/components/home/HotelioAIShowcase";
 import ServicesShowcase from "@/components/home/ServicesShowcase";
 import HotelAreas from "@/components/home/HotelAreas";
 import WhyUs from "@/components/home/WhyUs";
@@ -12,8 +13,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <SolutionsOverview />
+      <SolutionsHub />
       <HotelioShowcase />
+      <HotelioAIShowcase />
       <ServicesShowcase />
       <HotelAreas />
       <WhyUs />

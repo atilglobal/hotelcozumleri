@@ -68,7 +68,11 @@ export default function HotelioDemoForm({ id = "hotelio-demo" }) {
     setLoading(true);
     setSubmitError("");
     try {
-      await submitForm("/api/forms/hotelio-demo", { ...data, formType: "hotelio-demo" });
+      await submitForm("/api/forms/hotelio-demo", {
+        ...data,
+        modules: data.interests,
+        formType: "hotelio-demo",
+      });
       setSuccess(true);
     } catch (err) {
       setSubmitError(err.message);
@@ -122,7 +126,7 @@ export default function HotelioDemoForm({ id = "hotelio-demo" }) {
       </FormField>
 
       <div>
-        <p className="text-sm font-medium text-navy mb-3">İlgilendiğiniz Alanlar</p>
+        <p className="text-sm font-medium text-navy mb-3">Özellikle Görmek İstediğiniz Alanlar</p>
         <div className="flex flex-wrap gap-2">
           {hotelioDemoInterests.map((item) => (
             <button

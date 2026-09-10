@@ -6,6 +6,10 @@ const variants = {
     "bg-gradient-to-r from-blue to-blue-deep text-white hover:from-blue-bright hover:to-blue border border-transparent shadow-[var(--shadow-glow-blue)] hover:shadow-[0_12px_40px_rgba(59,108,244,0.35)] hover:-translate-y-0.5",
   secondary:
     "bg-white/10 text-white border border-white/25 hover:bg-white/15 hover:border-white/40 backdrop-blur-sm",
+  "secondary-glass":
+    "bg-white/10 text-white border border-white/25 hover:bg-white/15 hover:border-white/40 backdrop-blur-sm",
+  "hero-secondary":
+    "bg-white text-navy border border-white hover:bg-off-white shadow-lg hover:-translate-y-0.5",
   outline:
     "bg-white text-navy border border-navy/10 hover:border-blue/30 hover:text-blue shadow-sm hover:shadow-md",
   gold:

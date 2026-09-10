@@ -24,7 +24,7 @@ export default function SectionTitle({
 
   const subtitleClasses = {
     light: "text-gray-light",
-    dark: "text-white/60",
+    dark: "text-body-on-dark",
   };
 
   return (
@@ -37,7 +37,7 @@ export default function SectionTitle({
         </AnimatedText>
       )}
       <AnimatedText delay={0.1}>
-        <h2 className={cn("text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.08] tracking-tight", themeClasses[theme])}>
+        <h2 className={cn("text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.08] tracking-tight", theme === "dark" ? "heading-on-dark" : "text-navy")}>
           {title}
           {titleAccent && (
             <>

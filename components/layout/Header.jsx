@@ -68,7 +68,7 @@ export default function Header() {
                       navLight
                         ? isActive
                           ? "bg-white/15 text-white"
-                          : "text-white/75 hover:text-white hover:bg-white/10"
+                          : "text-white/90 hover:text-white hover:bg-white/10"
                         : isActive
                           ? "bg-ice text-blue-deep"
                           : "text-gray hover:text-navy hover:bg-navy/5"
@@ -82,7 +82,7 @@ export default function Header() {
 
             <div className="hidden lg:flex items-center gap-2 shrink-0">
               <HeaderActions isLight={navLight} />
-              <Button href={ctaLinks.teklif} variant={navLight ? "secondary" : "outline"} size="sm">
+              <Button href={ctaLinks.teklif} variant={navLight ? "hero-secondary" : "outline"} size="sm">
                 Teklif Al
               </Button>
               <Button href={ctaLinks.hotelioDemo} variant="gold" size="sm">

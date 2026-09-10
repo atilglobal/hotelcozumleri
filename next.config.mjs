@@ -10,6 +10,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      { source: "/urunler", destination: "/tedarik", permanent: true },
+      { source: "/urunler/:slug", destination: "/tedarik", permanent: true },
+      { source: "/sepet", destination: "/tedarik", permanent: true },
+      { source: "/teklif-sepeti", destination: "/tedarik", permanent: true },
+      { source: "/kategori/:slug", destination: "/tedarik", permanent: true },
+      { source: "/odeme", destination: "/teklif-al", permanent: true },
+      { source: "/odeme/:path*", destination: "/teklif-al", permanent: true },
       {
         source: "/cozumler/sarf-malzemeleri",
         destination: "/cozumler/sarf-temizlik",
