@@ -1,0 +1,2 @@
+-- Admin user seed: run `node scripts/seed-admin.js admin@hotelcozumleri.com YOUR_PASSWORD`
+-- after applying migration-faz5.sql
