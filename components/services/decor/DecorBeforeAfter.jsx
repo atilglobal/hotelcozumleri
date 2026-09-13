@@ -22,8 +22,8 @@ export default function DecorBeforeAfter() {
             Dönüşümü Konsept Olarak Görün
           </h2>
           <p className="text-body-on-dark text-sm md:text-base">
-            Aşağıdaki görseller gerçek müşteri projesi değil; uygulama fikrini gösteren konsept mockup&apos;larıdır.
-            Kaydırıcıyı sürükleyerek farkı inceleyebilirsiniz.
+            Aşağıdaki görseller gerçek müşteri projesi değil; aynı mekânın uygulama öncesi ve sonrasını gösteren konsept mockup&apos;larıdır.
+            Kaydırıcıyı sürükleyerek dönüşümü inceleyebilirsiniz.
           </p>
         </AnimatedText>
 
