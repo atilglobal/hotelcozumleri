@@ -24,15 +24,15 @@ export default function TextileLogoFlow({ steps }) {
               index === 2
                 ? "bg-navy border-gold/30"
                 : index === 1
-                  ? "bg-ice border-blue/20"
-                  : "bg-off-white border-navy/10"
+                  ? "bg-blue/10 border-blue/25"
+                  : "bg-white/5 border-white/10"
             }`}
           >
             {index === 2 && (
               <span className="text-gold font-display text-xl tracking-widest">LOGO</span>
             )}
             {index === 0 && (
-              <span className="text-gray-light text-sm">Standart ürün</span>
+              <span className="text-muted-on-dark text-sm">Standart ürün</span>
             )}
             {index === 1 && (
               <span className="text-blue text-sm font-medium">Nakış uygulaması</span>

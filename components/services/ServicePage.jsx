@@ -14,6 +14,7 @@ import CleaningAreaTabs from "./visuals/CleaningAreaTabs";
 import SpaProcessTimeline from "./visuals/SpaProcessTimeline";
 import Container from "@/components/ui/Container";
 import AnimatedText from "@/components/ui/AnimatedText";
+import SectionBackdrop from "@/components/ui/SectionBackdrop";
 
 const defaultBreadcrumbs = (service) => [
   { label: "Ana Sayfa", href: "/" },
@@ -51,9 +52,9 @@ export default function ServicePage({ service }) {
         {service.goals && (
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {service.goals.map((goal) => (
-              <div key={goal} className="flex items-center gap-3 p-4 bg-off-white rounded-sm">
-                <span className="w-2 h-2 rounded-full bg-blue" />
-                <span className="text-navy font-medium">{goal}</span>
+              <div key={goal} className="flex items-center gap-3 p-4 glass-card-dark rounded-xl">
+                <span className="w-2 h-2 rounded-full bg-gold" />
+                <span className="text-body-on-dark font-medium">{goal}</span>
               </div>
             ))}
           </div>
@@ -61,16 +62,17 @@ export default function ServicePage({ service }) {
       </ServiceIntro>
 
       {service.slug === "otel-web-sitesi" && (
-        <section className="py-16 md:py-20 bg-off-white">
-          <Container>
+        <section className="py-16 md:py-20 section-dark-b relative overflow-hidden">
+          <SectionBackdrop variant="b" />
+          <Container className="relative z-10">
             <AnimatedText>
-              <h2 className="font-display text-3xl text-navy text-center mb-10">
+              <h2 className="font-display text-3xl heading-on-dark text-center mb-10">
                 Otel Web Siteniz Böyle Görünebilir
               </h2>
             </AnimatedText>
             <WebSiteMockup />
             {service.techNote && (
-              <p className="text-center text-sm text-gray-light mt-8 max-w-2xl mx-auto">
+              <p className="text-center text-sm text-body-on-dark mt-8 max-w-2xl mx-auto">
                 {service.techNote}
               </p>
             )}
@@ -87,15 +89,16 @@ export default function ServicePage({ service }) {
           features={service.features || service.featureGroups}
           title={service.slug === "kapi-sistemleri" ? "Hizmet Kapsamı" : "Öne Çıkan Özellikler"}
           columns={(service.features || service.featureGroups)?.length > 6 ? 3 : 2}
-          theme={service.slug === "spa-kurulumu" ? "dark" : "light"}
+          theme="dark"
         />
       )}
 
       {service.slug === "sosyal-medya" && (
-        <section className="py-16 md:py-20 bg-white">
-          <Container>
+        <section className="py-16 md:py-20 section-dark-a relative overflow-hidden">
+          <SectionBackdrop variant="a" />
+          <Container className="relative z-10">
             <AnimatedText>
-              <h2 className="font-display text-3xl text-navy text-center mb-10">
+              <h2 className="font-display text-3xl heading-on-dark text-center mb-10">
                 İçerik ve Etkileşim Odaklı Yaklaşım
               </h2>
             </AnimatedText>
@@ -105,10 +108,11 @@ export default function ServicePage({ service }) {
       )}
 
       {service.integrationFlow && (
-        <section className="py-16 md:py-20 bg-off-white">
-          <Container>
+        <section className="py-16 md:py-20 section-dark-c relative overflow-hidden">
+          <SectionBackdrop variant="c" />
+          <Container className="relative z-10">
             <AnimatedText>
-              <h2 className="font-display text-3xl text-navy text-center mb-10">
+              <h2 className="font-display text-3xl heading-on-dark text-center mb-10">
                 Entegrasyon Akışı
               </h2>
             </AnimatedText>
@@ -118,13 +122,14 @@ export default function ServicePage({ service }) {
       )}
 
       {service.logoFlow && (
-        <section className="py-16 md:py-20 bg-off-white">
-          <Container>
+        <section className="py-16 md:py-20 section-dark-b relative overflow-hidden">
+          <SectionBackdrop variant="b" />
+          <Container className="relative z-10">
             <AnimatedText>
-              <h2 className="font-display text-3xl text-navy text-center mb-4">
+              <h2 className="font-display text-3xl heading-on-dark text-center mb-4">
                 Logonuz, Misafirinizin Her Dokunuşunda
               </h2>
-              <p className="text-gray-light text-center mb-10 max-w-xl mx-auto">
+              <p className="text-body-on-dark text-center mb-10 max-w-xl mx-auto">
                 Otel logosuna özel nakış uygulaması ile kurumsal bütünlüğünüzü güçlendirin.
               </p>
             </AnimatedText>
@@ -132,7 +137,7 @@ export default function ServicePage({ service }) {
             {service.highlights && (
               <div className="flex flex-wrap justify-center gap-4 mt-10">
                 {service.highlights.map((h) => (
-                  <span key={h} className="px-4 py-2 bg-white border border-navy/10 rounded-sm text-sm text-navy">
+                  <span key={h} className="px-4 py-2 glass-card-dark text-sm text-body-on-dark rounded-xl">
                     {h}
                   </span>
                 ))}
@@ -143,11 +148,12 @@ export default function ServicePage({ service }) {
       )}
 
       {service.productGroups && service.slug === "otel-tekstili" && (
-        <section className="py-12 bg-white">
-          <Container>
+        <section className="py-12 section-dark-d relative overflow-hidden">
+          <SectionBackdrop variant="d" />
+          <Container className="relative z-10">
             <div className="flex flex-wrap justify-center gap-3">
               {service.productGroups.map((group) => (
-                <span key={group} className="px-5 py-2.5 bg-ice text-blue text-sm font-medium rounded-sm">
+                <span key={group} className="px-5 py-2.5 glass-card-dark text-gold-light text-sm font-medium rounded-xl">
                   {group}
                 </span>
               ))}
@@ -157,10 +163,11 @@ export default function ServicePage({ service }) {
       )}
 
       {service.areas && (
-        <section className="py-16 md:py-20 bg-off-white">
-          <Container>
+        <section className="py-16 md:py-20 section-dark-a relative overflow-hidden">
+          <SectionBackdrop variant="a" />
+          <Container className="relative z-10">
             <AnimatedText>
-              <h2 className="font-display text-3xl text-navy text-center mb-10">
+              <h2 className="font-display text-3xl heading-on-dark text-center mb-10">
                 Alan Bazlı Ürün Grupları
               </h2>
             </AnimatedText>
@@ -170,13 +177,14 @@ export default function ServicePage({ service }) {
       )}
 
       {service.process && (
-        <section className="py-16 md:py-24 bg-white">
-          <Container>
+        <section className="py-16 md:py-24 section-dark-c relative overflow-hidden">
+          <SectionBackdrop variant="c" />
+          <Container className="relative z-10">
             <AnimatedText>
-              <h2 className="font-display text-3xl md:text-4xl text-navy text-center mb-4">
+              <h2 className="font-display text-3xl md:text-4xl heading-on-dark text-center mb-4">
                 Anahtar Teslim Süreç
               </h2>
-              <p className="text-gray-light text-center mb-12 max-w-xl mx-auto">
+              <p className="text-body-on-dark text-center mb-12 max-w-xl mx-auto">
                 Keşiften teslime, otelinize özel SPA projesi yönetimi.
               </p>
             </AnimatedText>
@@ -186,11 +194,12 @@ export default function ServicePage({ service }) {
       )}
 
       {service.solutionAreas && (
-        <section className="py-12 bg-navy">
-          <Container>
+        <section className="py-12 section-dark-gradient relative overflow-hidden">
+          <SectionBackdrop variant="gradient" />
+          <Container className="relative z-10">
             <div className="flex flex-wrap justify-center gap-4">
               {service.solutionAreas.map((area) => (
-                <span key={area} className="px-5 py-2.5 border border-gold/30 text-gold text-sm rounded-sm">
+                <span key={area} className="px-5 py-2.5 border border-gold/30 text-gold text-sm rounded-xl">
                   {area}
                 </span>
               ))}

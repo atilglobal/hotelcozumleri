@@ -6,10 +6,8 @@ export default function FormInput({ className, error, label, required, id, ...pr
     <input
       id={id}
       className={cn(
-        "w-full px-4 py-3 text-navy bg-white border rounded-sm transition-colors",
-        "placeholder:text-gray-light/60",
-        "focus:outline-none focus:ring-2 focus:ring-blue/30 focus:border-blue",
-        error ? "border-red-400" : "border-navy/15",
+        "input-dark",
+        error && "border-red-400 focus:border-red-400 focus:shadow-[0_0_0_3px_rgba(248,113,113,0.12)]",
         className
       )}
       {...props}

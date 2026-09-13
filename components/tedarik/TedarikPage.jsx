@@ -5,6 +5,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import AnimatedText from "@/components/ui/AnimatedText";
+import SectionBackdrop from "@/components/ui/SectionBackdrop";
 import TedarikRequestForm from "./TedarikRequestForm";
 import { tedarikHero, tedarikCategories, tedarikProcess } from "@/config/tedarik";
 
@@ -12,7 +13,7 @@ export default function TedarikPage() {
   return (
     <>
       <section className="relative pt-[calc(var(--header-height)+3rem)] pb-20 md:pb-28 bg-premium-dark overflow-hidden">
-        <div className="absolute inset-0 bg-grid-subtle opacity-[0.04]" style={{ backgroundSize: "56px 56px" }} />
+        <SectionBackdrop variant="gradient" />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/10 blur-[140px] rounded-full" />
         <Container className="relative z-10">
           <AnimatedText>
@@ -43,11 +44,12 @@ export default function TedarikPage() {
         </Container>
       </section>
 
-      <section className="section-padding bg-off-white">
-        <Container>
+      <section className="section-padding section-dark-a relative overflow-hidden">
+        <SectionBackdrop variant="a" />
+        <Container className="relative z-10">
           <div className="max-w-2xl mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Tedarik Kategorileri</h2>
-            <p className="text-body-on-light text-lg">
+            <h2 className="text-3xl md:text-4xl font-bold heading-on-dark mb-4">Tedarik Kategorileri</h2>
+            <p className="text-body-on-dark text-lg">
               Ürün kataloğu değil — ihtiyacınızı ileteceğiniz profesyonel satın alma alanları.
             </p>
           </div>
@@ -56,7 +58,7 @@ export default function TedarikPage() {
               <AnimatedText key={cat.id} delay={index * 0.05}>
                 <Link
                   href={`#talep-formu`}
-                  className="group relative block aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-navy/8 shadow-[var(--shadow-card)]"
+                  className="group relative block aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-[var(--shadow-card)]"
                 >
                   <Image src={cat.image} alt={cat.title} fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-navy/10" />
@@ -71,32 +73,33 @@ export default function TedarikPage() {
         </Container>
       </section>
 
-      <section id="surec" className="section-padding bg-white">
-        <Container>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-12 text-center">Tedarik Süreci</h2>
+      <section id="surec" className="section-padding section-dark-b relative overflow-hidden">
+        <SectionBackdrop variant="b" />
+        <Container className="relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold heading-on-dark mb-12 text-center">Tedarik Süreci</h2>
           <div className="hidden lg:grid grid-cols-5 gap-4">
             {tedarikProcess.map((step, i) => (
               <div key={step.step} className="relative text-center">
                 {i < tedarikProcess.length - 1 && (
                   <div className="absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-gold/60 to-blue/30" />
                 )}
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-ice border border-blue/15 flex items-center justify-center text-blue-deep font-bold mb-4">
+                <div className="w-16 h-16 mx-auto rounded-2xl glass-card-dark flex items-center justify-center text-gold-light font-bold mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-lg font-bold text-navy mb-2">{step.title}</h3>
-                <p className="text-sm text-gray leading-relaxed">{step.description}</p>
+                <h3 className="text-lg font-bold heading-on-dark mb-2">{step.title}</h3>
+                <p className="text-sm text-body-on-dark leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
           <div className="lg:hidden space-y-6">
             {tedarikProcess.map((step) => (
-              <div key={step.step} className="flex gap-4 p-5 rounded-2xl bg-off-white border border-navy/6">
-                <div className="w-12 h-12 shrink-0 rounded-xl bg-ice flex items-center justify-center text-blue-deep font-bold text-sm">
+              <div key={step.step} className="flex gap-4 p-5 rounded-2xl glass-card-dark">
+                <div className="w-12 h-12 shrink-0 rounded-xl glass-card-dark flex items-center justify-center text-gold-light font-bold text-sm">
                   {step.step}
                 </div>
                 <div>
-                  <h3 className="font-bold text-navy mb-1">{step.title}</h3>
-                  <p className="text-sm text-gray leading-relaxed">{step.description}</p>
+                  <h3 className="font-bold heading-on-dark mb-1">{step.title}</h3>
+                  <p className="text-sm text-body-on-dark leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -104,15 +107,16 @@ export default function TedarikPage() {
         </Container>
       </section>
 
-      <section className="section-padding bg-mesh-light">
-        <Container>
+      <section className="section-padding section-dark-c relative overflow-hidden">
+        <SectionBackdrop variant="c" />
+        <Container className="relative z-10">
           <div className="max-w-3xl mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Tedarik Talebi Oluştur</h2>
-            <p className="text-body-on-light text-lg">
+            <h2 className="text-3xl md:text-4xl font-bold heading-on-dark mb-4">Tedarik Talebi Oluştur</h2>
+            <p className="text-body-on-dark text-lg">
               Birden fazla kalem ekleyebilir, spesifikasyonları paylaşabilir ve dosya yükleyebilirsiniz.
             </p>
           </div>
-          <div className="p-6 md:p-10 rounded-3xl bg-white border border-navy/8 shadow-[var(--shadow-soft)]">
+          <div className="p-6 md:p-10 rounded-3xl glass-card-dark">
             <TedarikRequestForm />
           </div>
         </Container>

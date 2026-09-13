@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 import AnimatedText from "@/components/ui/AnimatedText";
+import SectionBackdrop from "@/components/ui/SectionBackdrop";
 import PreviewMockup from "./mockups/PreviewMockups";
 import { hotelioCategories } from "@/config/hotelio";
 import { cn } from "@/utils/cn";
@@ -13,11 +14,12 @@ export default function HotelioModuleNavigator() {
   const current = hotelioCategories.find((c) => c.id === active);
 
   return (
-    <section className="section-padding bg-off-white" id="moduller">
-      <Container>
+    <section className="section-padding section-dark-b relative overflow-hidden" id="moduller">
+      <SectionBackdrop variant="b" />
+      <Container className="relative z-10">
         <AnimatedText>
-          <h2 className="font-display text-3xl md:text-4xl text-navy mb-4">Modül Mimarisi</h2>
-          <p className="text-gray-light max-w-2xl mb-12">
+          <h2 className="font-display text-3xl md:text-4xl heading-on-dark mb-4">Modül Mimarisi</h2>
+          <p className="text-body-on-dark max-w-2xl mb-12">
             Otel operasyonunuzun her katmanı için tasarlanmış modüler yapı.
           </p>
         </AnimatedText>
@@ -32,8 +34,8 @@ export default function HotelioModuleNavigator() {
                 className={cn(
                   "w-full text-left px-4 py-3 rounded-sm border-l-2 transition-all text-sm",
                   active === cat.id
-                    ? "border-gold bg-white text-navy shadow-sm"
-                    : "border-transparent text-gray-light hover:text-navy hover:bg-white/60"
+                    ? "border-gold glass-card-dark heading-on-dark"
+                    : "border-transparent text-body-on-dark hover:text-white hover:bg-white/5"
                 )}
                 aria-current={active === cat.id ? "true" : undefined}
               >
@@ -54,12 +56,12 @@ export default function HotelioModuleNavigator() {
                   transition={{ duration: 0.35 }}
                 >
                   <PreviewMockup type={current.mockupType} className="mb-6" />
-                  <h3 className="font-display text-2xl text-navy mb-2">{current.label}</h3>
-                  <p className="text-gray-light mb-6">{current.description}</p>
+                  <h3 className="font-display text-2xl heading-on-dark mb-2">{current.label}</h3>
+                  <p className="text-body-on-dark mb-6">{current.description}</p>
                   <ul className="grid sm:grid-cols-2 gap-2">
                     {current.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm text-navy/80">
-                        <span className="w-1 h-1 rounded-full bg-blue mt-2 shrink-0" />
+                      <li key={f} className="flex items-start gap-2 text-sm text-body-on-dark">
+                        <span className="w-1 h-1 rounded-full bg-gold mt-2 shrink-0" />
                         {f}
                       </li>
                     ))}

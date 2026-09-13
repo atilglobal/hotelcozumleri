@@ -16,7 +16,7 @@ export default function Projects() {
   }
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding section-dark-d relative overflow-hidden">
       <Container>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionTitle title={projects.title} subtitle={projects.subtitle} className="mb-0" />

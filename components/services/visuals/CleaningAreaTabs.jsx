@@ -23,7 +23,7 @@ export default function CleaningAreaTabs({ areas }) {
               "px-4 py-2 text-sm font-medium rounded-sm border transition-all",
               active === key
                 ? "bg-blue text-white border-blue"
-                : "bg-white text-navy border-navy/10 hover:border-blue/30"
+                : "bg-white/5 text-body-on-dark border-white/10 hover:border-blue/30"
             )}
           >
             {areas[key].label}
@@ -39,12 +39,12 @@ export default function CleaningAreaTabs({ areas }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
-          className="bg-white border border-navy/10 rounded-sm p-6 md:p-8"
+          className="glass-card-dark rounded-xl p-6 md:p-8"
         >
-          <h3 className="font-display text-2xl text-navy mb-4">{current.label}</h3>
+          <h3 className="font-display text-2xl heading-on-dark mb-4">{current.label}</h3>
           <ul className="space-y-3">
             {current.products.map((product) => (
-              <li key={product} className="flex items-center gap-3 text-gray">
+              <li key={product} className="flex items-center gap-3 text-body-on-dark">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue shrink-0" />
                 {product}
               </li>

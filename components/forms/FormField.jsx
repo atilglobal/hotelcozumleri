@@ -4,14 +4,14 @@ export default function FormField({ label, htmlFor, error, children, required, c
   return (
     <div className={cn("space-y-2", className)}>
       {label && (
-        <label htmlFor={htmlFor} className="block text-sm font-medium text-navy">
+        <label htmlFor={htmlFor} className="block text-sm font-medium heading-on-dark">
           {label}
-          {required && <span className="text-blue ml-1" aria-hidden="true">*</span>}
+          {required && <span className="text-gold-light ml-1" aria-hidden="true">*</span>}
         </label>
       )}
       {children}
       {error && (
-        <p className="text-sm text-red-600" role="alert">
+        <p className="text-sm text-red-400" role="alert">
           {error}
         </p>
       )}

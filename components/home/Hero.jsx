@@ -8,8 +8,19 @@ import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import HeroTechComposition from "./HeroTechComposition";
 
+const wordVariants = {
+  hidden: { opacity: 0, y: 28 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, delay: 0.15 + i * 0.07, ease: [0.22, 1, 0.36, 1] },
+  }),
+};
+
 export default function Hero() {
   const prefersReducedMotion = useReducedMotion();
+  const line1Words = heroData.titleLine1.split(" ");
+  const line2Words = heroData.titleLine2Prefix.split(" ");
 
   return (
     <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-navy">
@@ -52,17 +63,45 @@ export default function Hero() {
             </motion.div>
 
             <div className="mb-6">
-              <motion.h1
-                initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className="heading-on-dark text-4xl sm:text-5xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold leading-[1.05] tracking-tight"
-              >
-                {heroData.titleLine1}
-                <br />
-                {heroData.titleLine2Prefix}{" "}
-                <span className="text-gradient-gold">{heroData.titleLine2Accent}</span>
-              </motion.h1>
+              <h1 className="heading-on-dark text-4xl sm:text-5xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold leading-[1.05] tracking-tight">
+                <span className="block">
+                  {line1Words.map((word, i) => (
+                    <motion.span
+                      key={`l1-${word}-${i}`}
+                      custom={i}
+                      initial={prefersReducedMotion ? false : "hidden"}
+                      animate="visible"
+                      variants={wordVariants}
+                      className="inline-block mr-[0.28em] last:mr-0"
+                    >
+                      {word}
+                    </motion.span>
+                  ))}
+                </span>
+                <span className="block mt-1">
+                  {line2Words.map((word, i) => (
+                    <motion.span
+                      key={`l2-${word}-${i}`}
+                      custom={line1Words.length + i}
+                      initial={prefersReducedMotion ? false : "hidden"}
+                      animate="visible"
+                      variants={wordVariants}
+                      className="inline-block mr-[0.28em] last:mr-0"
+                    >
+                      {word}
+                    </motion.span>
+                  ))}{" "}
+                  <motion.span
+                    custom={line1Words.length + line2Words.length}
+                    initial={prefersReducedMotion ? false : "hidden"}
+                    animate="visible"
+                    variants={wordVariants}
+                    className="text-gradient-gold inline-block"
+                  >
+                    {heroData.titleLine2Accent}
+                  </motion.span>
+                </span>
+              </h1>
             </div>
 
             <motion.p

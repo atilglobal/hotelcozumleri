@@ -7,6 +7,7 @@ import { cozumlerHub, services, serviceSlugs } from "@/config/services";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import AnimatedText from "@/components/ui/AnimatedText";
+import SectionBackdrop from "@/components/ui/SectionBackdrop";
 import { cn } from "@/utils/cn";
 
 export default function CozumlerHub() {
@@ -14,7 +15,8 @@ export default function CozumlerHub() {
 
   return (
     <>
-      <section className="relative min-h-[60vh] flex items-end overflow-hidden pt-[var(--header-height)] bg-navy">
+      <section className="relative min-h-[60vh] flex items-end overflow-hidden pt-[var(--header-height)] bg-premium-dark">
+        <SectionBackdrop variant="gradient" />
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue/20 rounded-full blur-[150px]" />
         </div>
@@ -25,14 +27,14 @@ export default function CozumlerHub() {
             </span>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-4 max-w-4xl">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl heading-on-dark leading-tight mt-4 max-w-4xl">
               {cozumlerHub.title}
               <br />
               <span className="text-gradient-gold">{cozumlerHub.titleAccent}</span>
             </h1>
           </AnimatedText>
           <AnimatedText delay={0.2}>
-            <p className="text-white/65 text-base md:text-lg leading-relaxed max-w-2xl mt-6">
+            <p className="text-body-on-dark text-base md:text-lg leading-relaxed max-w-2xl mt-6">
               {cozumlerHub.description}
             </p>
           </AnimatedText>
@@ -41,7 +43,7 @@ export default function CozumlerHub() {
               <Button href={cozumlerHub.primaryCta.href} variant="gold" size="lg">
                 {cozumlerHub.primaryCta.label}
               </Button>
-              <Button href={cozumlerHub.secondaryCta.href} variant="secondary" size="lg">
+              <Button href={cozumlerHub.secondaryCta.href} variant="secondary-glass" size="lg">
                 {cozumlerHub.secondaryCta.label}
               </Button>
             </div>
@@ -49,8 +51,9 @@ export default function CozumlerHub() {
         </Container>
       </section>
 
-      <section id="cozumler-listesi" className="section-padding bg-white">
-        <Container>
+      <section id="cozumler-listesi" className="section-padding section-dark-b relative overflow-hidden">
+        <SectionBackdrop variant="b" watermark="ÇÖZÜMLER" />
+        <Container className="relative z-10">
           <div className="space-y-24 md:space-y-32">
             {serviceSlugs.map((slug, index) => {
               const service = services[slug];
@@ -74,7 +77,7 @@ export default function CozumlerHub() {
                   )}
                   {...props}
                 >
-                  <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-white/10">
                     <Image
                       src={service.image}
                       alt={service.hero.eyebrow}
@@ -84,18 +87,18 @@ export default function CozumlerHub() {
                     />
                   </div>
                   <div>
-                    <span className="text-blue text-xs font-semibold tracking-[0.2em] uppercase">
+                    <span className="text-gold-light text-xs font-semibold tracking-[0.2em] uppercase">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <h2 className="font-display text-3xl md:text-4xl text-navy mt-2 mb-4">
+                    <h2 className="font-display text-3xl md:text-4xl heading-on-dark mt-2 mb-4">
                       {service.hero.eyebrow}
                     </h2>
-                    <p className="text-gray-light leading-relaxed mb-6">
+                    <p className="text-body-on-dark leading-relaxed mb-6">
                       {service.intro.text}
                     </p>
                     <ul className="grid sm:grid-cols-2 gap-2 mb-8">
                       {service.hubBenefits.map((benefit) => (
-                        <li key={benefit} className="flex items-center gap-2 text-sm text-navy">
+                        <li key={benefit} className="flex items-center gap-2 text-sm text-body-on-dark">
                           <span className="w-1 h-1 rounded-full bg-gold" />
                           {benefit}
                         </li>
@@ -103,7 +106,7 @@ export default function CozumlerHub() {
                     </ul>
                     <Link
                       href={`/cozumler/${slug}`}
-                      className="inline-flex items-center gap-2 text-blue font-medium hover:gap-3 transition-all"
+                      className="inline-flex items-center gap-2 text-gold-light font-medium hover:gap-3 transition-all"
                     >
                       Detayları İncele <span aria-hidden="true">→</span>
                     </Link>

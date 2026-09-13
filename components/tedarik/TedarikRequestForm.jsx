@@ -74,25 +74,25 @@ export default function TedarikRequestForm() {
     <form id="talep-formu" onSubmit={handleSubmit} className="space-y-8">
       <div className="space-y-4">
         <div className="flex items-center justify-between gap-4">
-          <h3 className="text-xl font-bold text-navy">Talep Kalemleri</h3>
+          <h3 className="text-xl font-bold heading-on-dark">Talep Kalemleri</h3>
           <button
             type="button"
             onClick={() => setItems((prev) => [...prev, emptyItem()])}
-            className="text-sm font-semibold text-blue hover:text-blue-deep transition-colors"
+            className="text-sm font-semibold text-gold-light hover:text-gold transition-colors"
           >
             + Yeni Kalem Ekle
           </button>
         </div>
 
         {items.map((item, index) => (
-          <div key={index} className="p-5 md:p-6 rounded-2xl bg-white border border-navy/8 shadow-[var(--shadow-soft)] space-y-4">
+          <div key={index} className="p-5 md:p-6 rounded-2xl glass-card-dark space-y-4">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold tracking-wider text-blue-deep uppercase">Kalem {index + 1}</span>
+              <span className="text-xs font-bold tracking-wider text-gold-light uppercase">Kalem {index + 1}</span>
               {items.length > 1 && (
                 <button
                   type="button"
                   onClick={() => setItems((prev) => prev.filter((_, i) => i !== index))}
-                  className="text-xs text-gray-light hover:text-navy"
+                  className="text-xs text-muted-on-dark hover:text-white"
                 >
                   Kaldır
                 </button>
@@ -100,34 +100,34 @@ export default function TedarikRequestForm() {
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               <label className="block">
-                <span className="text-sm font-medium text-navy mb-1.5 block">Ürün / İhtiyaç</span>
+                <span className="text-sm font-medium heading-on-dark mb-1.5 block">Ürün / İhtiyaç</span>
                 <input
                   required
                   value={item.name}
                   onChange={(e) => updateItem(index, "name", e.target.value)}
                   placeholder="Örn. Otel Havlusu"
-                  className="w-full px-4 py-3 rounded-xl border border-navy/10 bg-off-white text-navy focus:outline-none focus:ring-2 focus:ring-blue/30"
+                  className="input-dark"
                 />
               </label>
               <label className="block">
-                <span className="text-sm font-medium text-navy mb-1.5 block">Miktar</span>
+                <span className="text-sm font-medium heading-on-dark mb-1.5 block">Miktar</span>
                 <input
                   required
                   value={item.quantity}
                   onChange={(e) => updateItem(index, "quantity", e.target.value)}
                   placeholder="Örn. 300 adet"
-                  className="w-full px-4 py-3 rounded-xl border border-navy/10 bg-off-white text-navy focus:outline-none focus:ring-2 focus:ring-blue/30"
+                  className="input-dark"
                 />
               </label>
             </div>
             <label className="block">
-              <span className="text-sm font-medium text-navy mb-1.5 block">Açıklama</span>
+              <span className="text-sm font-medium heading-on-dark mb-1.5 block">Açıklama</span>
               <textarea
                 rows={2}
                 value={item.description}
                 onChange={(e) => updateItem(index, "description", e.target.value)}
                 placeholder="Örn. 50x90 beyaz, logo nakışlı"
-                className="w-full px-4 py-3 rounded-xl border border-navy/10 bg-off-white text-navy focus:outline-none focus:ring-2 focus:ring-blue/30 resize-none"
+                className="input-dark resize-none"
               />
             </label>
           </div>
@@ -144,42 +144,42 @@ export default function TedarikRequestForm() {
           ["roomCount", "Oda Sayısı", "text"],
         ].map(([key, label, type]) => (
           <label key={key} className="block">
-            <span className="text-sm font-medium text-navy mb-1.5 block">{label}</span>
+            <span className="text-sm font-medium heading-on-dark mb-1.5 block">{label}</span>
             <input
               required={["companyName", "contactName", "phone", "email", "city"].includes(key)}
               type={type}
               value={form[key]}
               onChange={(e) => setForm((p) => ({ ...p, [key]: e.target.value }))}
-              className="w-full px-4 py-3 rounded-xl border border-navy/10 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-blue/30"
+              className="input-dark"
             />
           </label>
         ))}
         <label className="block md:col-span-2">
-          <span className="text-sm font-medium text-navy mb-1.5 block">Teslimat Beklentisi</span>
+          <span className="text-sm font-medium heading-on-dark mb-1.5 block">Teslimat Beklentisi</span>
           <input
             value={form.deliveryExpectation}
             onChange={(e) => setForm((p) => ({ ...p, deliveryExpectation: e.target.value }))}
             placeholder="Örn. 30 gün içinde"
-            className="w-full px-4 py-3 rounded-xl border border-navy/10 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-blue/30"
+            className="input-dark"
           />
         </label>
         <label className="block md:col-span-2">
-          <span className="text-sm font-medium text-navy mb-1.5 block">Ek Açıklama</span>
+          <span className="text-sm font-medium heading-on-dark mb-1.5 block">Ek Açıklama</span>
           <textarea
             rows={3}
             value={form.notes}
             onChange={(e) => setForm((p) => ({ ...p, notes: e.target.value }))}
-            className="w-full px-4 py-3 rounded-xl border border-navy/10 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-blue/30 resize-none"
+            className="input-dark resize-none"
           />
         </label>
         <label className="block md:col-span-2">
-          <span className="text-sm font-medium text-navy mb-1.5 block">Dosya Ekle (PDF, Excel, Word, Görsel — max 8MB)</span>
+          <span className="text-sm font-medium heading-on-dark mb-1.5 block">Dosya Ekle (PDF, Excel, Word, Görsel — max 8MB)</span>
           <input
             type="file"
             multiple
             accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.webp"
             onChange={(e) => setFiles(Array.from(e.target.files || []))}
-            className="w-full text-sm text-gray"
+            className="w-full text-sm text-body-on-dark"
           />
         </label>
       </div>
@@ -195,7 +195,7 @@ export default function TedarikRequestForm() {
         aria-hidden="true"
       />
 
-      <label className="flex items-start gap-3 text-sm text-gray">
+      <label className="flex items-start gap-3 text-sm text-body-on-dark">
         <input
           type="checkbox"
           checked={form.kvkkAccepted}
@@ -204,13 +204,13 @@ export default function TedarikRequestForm() {
           required
         />
         <span>
-          <Link href="/kvkk" className="text-blue hover:underline">KVKK Aydınlatma Metni</Link>
+          <Link href="/kvkk" className="text-gold-light hover:underline">KVKK Aydınlatma Metni</Link>
           &apos;ni okudum ve onaylıyorum.
         </span>
       </label>
 
       {status.message && (
-        <p className={cn("text-sm font-medium", status.type === "success" ? "text-green-700" : "text-red-600")}>
+        <p className={cn("text-sm font-medium", status.type === "success" ? "text-green-400" : "text-red-400")}>
           {status.message}
         </p>
       )}

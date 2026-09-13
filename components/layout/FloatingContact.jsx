@@ -15,13 +15,13 @@ export default function FloatingContact() {
         <div className="flex flex-col gap-2 mb-1 animate-[fade-up_0.3s_ease]">
           <Link
             href="/teklif-al"
-            className="px-4 py-2.5 bg-white border border-navy/8 rounded-xl text-sm font-semibold text-navy shadow-[var(--shadow-card)] hover:border-blue/25 transition-all"
+            className="px-4 py-2.5 glass-card-dark rounded-xl text-sm font-semibold heading-on-dark shadow-[var(--shadow-card)] hover:border-gold/30 transition-all"
           >
             Teklif Al
           </Link>
           <Link
             href="/hotelio-demo"
-            className="px-4 py-2.5 bg-navy border border-gold/25 rounded-xl text-sm font-semibold text-gold shadow-[var(--shadow-card)] hover:border-gold/40 transition-all"
+            className="px-4 py-2.5 glass-card-dark border-gold/25 rounded-xl text-sm font-semibold text-gold shadow-[var(--shadow-card)] hover:border-gold/40 transition-all"
           >
             Hotelio Demo
           </Link>
@@ -52,7 +52,7 @@ export default function FloatingContact() {
         <button
           type="button"
           onClick={() => setExpanded(!expanded)}
-          className="md:hidden w-11 h-11 flex items-center justify-center bg-white border border-navy/8 rounded-full shadow-[var(--shadow-card)] text-navy"
+          className="md:hidden w-11 h-11 flex items-center justify-center glass-card-dark rounded-full shadow-[var(--shadow-card)] heading-on-dark"
           aria-label={expanded ? "Menüyü kapat" : "Hızlı iletişim"}
           aria-expanded={expanded}
         >

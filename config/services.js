@@ -1,3 +1,5 @@
+import { siteImages } from "./images.js";
+
 export const serviceSlugs = [
   "otel-web-sitesi",
   "sosyal-medya",
@@ -5,6 +7,7 @@ export const serviceSlugs = [
   "otel-tekstili",
   "sarf-temizlik",
   "spa-kurulumu",
+  "yapay-cicek-dekorasyon",
 ];
 
 export const megaMenuSolutions = {
@@ -47,6 +50,12 @@ export const megaMenuSolutions = {
       label: "SPA Kurulumu",
       description: "Anahtar teslim wellness çözümleri",
       href: "/cozumler/spa-kurulumu",
+    },
+    {
+      slug: "yapay-cicek-dekorasyon",
+      label: "Yapay Çiçek & Dekorasyon",
+      description: "Dikey bahçeden lobi ağaçlarına kadar özel dekoratif uygulamalar.",
+      href: "/cozumler/yapay-cicek-dekorasyon",
     },
   ],
   hotelio: {
@@ -355,9 +364,44 @@ export const services = {
       title: "SPA Projeniz İçin Görüşelim",
       href: "/teklif-al?hizmet=spa-kurulumu",
     },
-    related: ["hotelio", "sarf-temizlik"],
+    related: ["yapay-cicek-dekorasyon", "sarf-temizlik"],
     image: "/images/services/spa/hero.svg",
     hubBenefits: ["Anahtar teslim kurulum", "Özel proje tasarımı", "Premium ekipman", "7 adımlı süreç"],
+  },
+  "yapay-cicek-dekorasyon": {
+    slug: "yapay-cicek-dekorasyon",
+    theme: "luxury",
+    accent: "gold",
+    customPage: true,
+    seo: {
+      title: "Oteller İçin Yapay Çiçek ve Bitki Dekorasyonu | Hotel Çözümleri",
+      description:
+        "Hotel Çözümleri; otellere özel dikey bahçe, yapay ağaç, yapay palmiye, lobi, bar, restoran ve merdiven altı yapay çiçek dekorasyon uygulamaları sunar.",
+    },
+    hero: {
+      eyebrow: "Yapay Çiçek & Dekorasyon",
+      title: "Doğanın Estetiğini,",
+      titleAccent: "Bakım Gerektirmeden Otelinize Taşıyın.",
+      description:
+        "Lobiden restorana, bar alanlarından merdiven boşluklarına kadar otelinizin mimarisine ve konseptine özel yapay bitki ve çiçek dekorasyonları tasarlıyor ve uyguluyoruz.",
+      image: null,
+    },
+    intro: {
+      text: "Hotel Çözümleri olarak yapay çiçek satışı değil; alanı değerlendiren, konsepte göre tasarlayan, uygun bitki çözümlerini seçen, projelendirip montajı tamamlayan uçtan uca dekorasyon hizmeti sunuyoruz.",
+    },
+    hubBenefits: [
+      "Dikey bahçe uygulamaları",
+      "Lobi karşılama ağaçları",
+      "Tavan & bar çiçeklendirme",
+      "Konsept bazlı proje yönetimi",
+    ],
+    cta: {
+      title: "Projeniz İçin Teklif Al",
+      href: "/cozumler/yapay-cicek-dekorasyon#teklif-formu",
+      secondary: { label: "Uygulama Alanlarını Keşfet", href: "#uygulama-alanlari" },
+    },
+    related: ["spa-kurulumu", "otel-tekstili", "sarf-temizlik"],
+    image: siteImages.solutions.decor,
   },
 };
 
@@ -404,6 +448,12 @@ export const relatedServiceMap = {
     label: "SPA Kurulumu",
     description: "Anahtar teslim wellness",
     href: "/cozumler/spa-kurulumu",
+  },
+  "yapay-cicek-dekorasyon": {
+    slug: "yapay-cicek-dekorasyon",
+    label: "Yapay Çiçek & Dekorasyon",
+    description: "Lobi, bar ve ortak alan dekorasyonu",
+    href: "/cozumler/yapay-cicek-dekorasyon",
   },
 };
 

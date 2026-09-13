@@ -15,7 +15,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === "/";
   const isCozumler = pathname.startsWith("/cozumler");
 
   useEffect(() => {
@@ -25,26 +24,18 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerTransparent = isHome && !scrolled;
-  const headerScrolled = scrolled || !isHome;
-  const navLight = headerTransparent && !headerScrolled;
-
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-3 md:pt-4 pointer-events-none">
         <div
           className={cn(
-            "mx-auto max-w-[var(--container-max)] pointer-events-auto transition-all duration-500",
-            headerScrolled
-              ? "glass-header-light rounded-2xl px-4 md:px-6 shadow-[var(--shadow-soft)]"
-              : headerTransparent
-                ? "bg-transparent px-2"
-                : "glass-header rounded-2xl px-4 md:px-6"
+            "mx-auto max-w-[var(--container-max)] pointer-events-auto transition-all duration-500 glass-header rounded-2xl px-4 md:px-6",
+            scrolled && "shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
           )}
-          style={{ height: headerScrolled ? "var(--header-height-scrolled)" : "var(--header-height)" }}
+          style={{ height: scrolled ? "var(--header-height-scrolled)" : "var(--header-height)" }}
         >
           <div className="h-full flex items-center justify-between gap-4">
-            <Logo variant={navLight ? "light" : "dark"} />
+            <Logo variant="light" />
 
             <nav className="hidden lg:flex items-center gap-0.5 p-1 rounded-xl" aria-label="Ana navigasyon">
               {mainNavigation.map((item) => {
@@ -52,7 +43,7 @@ export default function Header() {
                   return (
                     <SolutionsMegaMenu
                       key={item.href}
-                      isLight={navLight}
+                      isLight
                       isActive={isCozumler}
                     />
                   );
@@ -65,13 +56,9 @@ export default function Header() {
                     href={item.href}
                     className={cn(
                       "px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-300",
-                      navLight
-                        ? isActive
-                          ? "bg-white/15 text-white"
-                          : "text-white/90 hover:text-white hover:bg-white/10"
-                        : isActive
-                          ? "bg-ice text-blue-deep"
-                          : "text-gray hover:text-navy hover:bg-navy/5"
+                      isActive
+                        ? "bg-white/12 text-white border border-white/10"
+                        : "text-white/80 hover:text-white hover:bg-white/8"
                     )}
                   >
                     {item.label}
@@ -81,8 +68,8 @@ export default function Header() {
             </nav>
 
             <div className="hidden lg:flex items-center gap-2 shrink-0">
-              <HeaderActions isLight={navLight} />
-              <Button href={ctaLinks.teklif} variant={navLight ? "hero-secondary" : "outline"} size="sm">
+              <HeaderActions isLight />
+              <Button href={ctaLinks.teklif} variant="secondary-glass" size="sm">
                 Teklif Al
               </Button>
               <Button href={ctaLinks.hotelioDemo} variant="gold" size="sm">
@@ -92,10 +79,7 @@ export default function Header() {
 
             <button
               type="button"
-              className={cn(
-                "lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-xl transition-colors",
-                navLight ? "text-white hover:bg-white/10" : "text-navy hover:bg-navy/5"
-              )}
+              className="lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-xl text-white hover:bg-white/10 transition-colors"
               onClick={() => setMobileOpen(true)}
               aria-label="Menüyü aç"
               aria-expanded={mobileOpen}

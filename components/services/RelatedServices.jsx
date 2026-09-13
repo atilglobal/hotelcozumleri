@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import Container from "@/components/ui/Container";
 import AnimatedText from "@/components/ui/AnimatedText";
+import SectionBackdrop from "@/components/ui/SectionBackdrop";
 import { cn } from "@/utils/cn";
 
 export default function RelatedServices({ services }) {
@@ -12,13 +13,14 @@ export default function RelatedServices({ services }) {
   if (!services?.length) return null;
 
   return (
-    <section className="py-16 md:py-20 bg-off-white border-t border-navy/5">
-      <Container>
+    <section className="py-16 md:py-20 section-dark-d relative overflow-hidden border-t border-white/10">
+      <SectionBackdrop variant="d" />
+      <Container className="relative z-10">
         <AnimatedText>
-          <h2 className="font-display text-2xl md:text-3xl text-navy mb-2">
+          <h2 className="font-display text-2xl md:text-3xl heading-on-dark mb-2">
             Bu Çözümü Tamamlayan Hizmetler
           </h2>
-          <p className="text-gray-light mb-10 max-w-xl">
+          <p className="text-body-on-dark mb-10 max-w-xl">
             Otelinizin ihtiyaçlarını bütüncül düşünerek birlikte değer üreten çözümler.
           </p>
         </AnimatedText>
@@ -29,16 +31,16 @@ export default function RelatedServices({ services }) {
               <Link
                 href={service.href}
                 className={cn(
-                  "group block p-6 rounded-sm border transition-all duration-300 h-full",
+                  "group block p-6 rounded-xl transition-all duration-300 h-full",
                   service.premium
-                    ? "border-gold/30 bg-navy hover:border-gold/50"
-                    : "border-navy/10 bg-white hover:border-blue/30 hover:shadow-sm"
+                    ? "border border-gold/30 bg-navy/60 hover:border-gold/50"
+                    : "glass-card-dark glass-card-dark-hover"
                 )}
               >
                 <span
                   className={cn(
                     "text-xs font-semibold tracking-[0.2em] uppercase",
-                    service.premium ? "text-gold" : "text-blue"
+                    service.premium ? "text-gold" : "text-gold-light"
                   )}
                 >
                   {service.premium ? "HOTELIO" : "Çözüm"}
@@ -46,18 +48,18 @@ export default function RelatedServices({ services }) {
                 <h3
                   className={cn(
                     "font-display text-xl mt-2 mb-2 transition-colors",
-                    service.premium ? "text-white group-hover:text-gold-light" : "text-navy group-hover:text-blue"
+                    service.premium ? "heading-on-dark group-hover:text-gold-light" : "heading-on-dark group-hover:text-gold-light"
                   )}
                 >
                   {service.label}
                 </h3>
-                <p className={cn("text-sm", service.premium ? "text-white/60" : "text-gray-light")}>
+                <p className={cn("text-sm", service.premium ? "text-body-on-dark" : "text-body-on-dark")}>
                   {service.description}
                 </p>
                 <span
                   className={cn(
                     "inline-flex items-center gap-1 mt-4 text-sm font-medium transition-all group-hover:gap-2",
-                    service.premium ? "text-gold" : "text-blue"
+                    service.premium ? "text-gold" : "text-gold-light"
                   )}
                 >
                   İncele <span aria-hidden="true">→</span>

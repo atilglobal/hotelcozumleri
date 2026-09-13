@@ -79,8 +79,7 @@ export default function WhyUsFeatureCard({ index, title, description }) {
   return (
     <article
       className={cn(
-        "group relative h-full overflow-hidden rounded-2xl bg-white border border-navy/6 p-6 md:p-7",
-        "shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)]",
+        "group relative h-full overflow-hidden rounded-2xl glass-card-dark glass-card-dark-hover p-6 md:p-7",
         "hover:-translate-y-1 transition-all duration-300 ring-1",
         theme.ring
       )}
@@ -109,15 +108,15 @@ export default function WhyUsFeatureCard({ index, title, description }) {
         >
           {theme.icon}
         </span>
-        <span className="text-[11px] font-bold tracking-widest text-gray-light/80 tabular-nums">{number}</span>
+        <span className="text-[11px] font-bold tracking-widest text-muted-on-dark tabular-nums">{number}</span>
       </div>
 
       <div className="relative z-10">
-        <h3 className="text-lg font-bold text-navy mb-2 tracking-tight">{title}</h3>
-        <p className="text-sm text-gray leading-relaxed">{description}</p>
+        <h3 className="text-lg font-bold heading-on-dark mb-2 tracking-tight">{title}</h3>
+        <p className="text-sm text-body-on-dark leading-relaxed">{description}</p>
       </div>
 
-      <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-navy/8 to-transparent" />
+      <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
     </article>
   );
 }

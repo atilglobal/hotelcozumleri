@@ -13,6 +13,7 @@ export const solutionOptions = [
   { id: "otel-tekstili", label: "Otel Tekstili" },
   { id: "sarf-temizlik", label: "Sarf & Temizlik" },
   { id: "spa-kurulumu", label: "SPA Kurulumu" },
+  { id: "yapay-cicek-dekorasyon", label: "Yapay Çiçek & Dekorasyon" },
   { id: "birden-fazla", label: "Birden Fazla Çözüm" },
 ];
 

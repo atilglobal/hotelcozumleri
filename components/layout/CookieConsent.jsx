@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
 
 const STORAGE_KEY = "hc_cookie_consent";
 
@@ -41,49 +40,49 @@ export default function CookieConsent() {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-[100] p-4 md:p-6" role="dialog" aria-label="Çerez tercihleri">
-      <div className="max-w-3xl mx-auto bg-white/95 backdrop-blur-xl rounded-2xl shadow-[var(--shadow-card)] border border-navy/8 p-5 md:p-6">
+      <div className="max-w-3xl mx-auto glass-card-dark backdrop-blur-xl rounded-2xl shadow-[var(--shadow-card)] p-5 md:p-6">
         {!showPrefs ? (
           <>
-            <p className="text-sm text-navy leading-relaxed">
+            <p className="text-sm text-body-on-dark leading-relaxed">
               Web sitemizde deneyiminizi iyileştirmek için çerezler kullanıyoruz. Zorunlu çerezler site işlevselliği için gereklidir.
               Detaylar için{" "}
-              <Link href="/cerez-politikasi" className="text-blue hover:underline">Çerez Politikası</Link>
+              <Link href="/cerez-politikasi" className="text-gold-light hover:underline">Çerez Politikası</Link>
               {" "}sayfamızı inceleyebilirsiniz.
             </p>
             <div className="flex flex-wrap gap-3 mt-5">
-              <button type="button" onClick={() => save(defaultPrefs)} className="px-4 py-2 text-sm border border-navy/20 rounded hover:bg-navy/5">
+              <button type="button" onClick={() => save(defaultPrefs)} className="px-4 py-2 text-sm border border-white/15 rounded-lg text-body-on-dark hover:bg-white/5 transition-colors">
                 Yalnızca Zorunlu
               </button>
-              <button type="button" onClick={() => setShowPrefs(true)} className="px-4 py-2 text-sm border border-navy/20 rounded hover:bg-navy/5">
+              <button type="button" onClick={() => setShowPrefs(true)} className="px-4 py-2 text-sm border border-white/15 rounded-lg text-body-on-dark hover:bg-white/5 transition-colors">
                 Tercihleri Yönet
               </button>
-              <button type="button" onClick={() => save({ necessary: true, analytics: true, marketing: true })} className="px-4 py-2 text-sm bg-blue text-white rounded hover:bg-blue-bright">
+              <button type="button" onClick={() => save({ necessary: true, analytics: true, marketing: true })} className="px-4 py-2 text-sm bg-blue text-white rounded-lg hover:bg-blue-bright">
                 Tümünü Kabul Et
               </button>
             </div>
           </>
         ) : (
           <>
-            <h2 className="font-display text-lg text-navy mb-4">Çerez Tercihleri</h2>
-            <div className="space-y-4 text-sm">
+            <h2 className="font-display text-lg heading-on-dark mb-4">Çerez Tercihleri</h2>
+            <div className="space-y-4 text-sm text-body-on-dark">
               <label className="flex items-start gap-3">
                 <input type="checkbox" checked disabled className="mt-1" />
-                <span><strong>Zorunlu</strong> — Site güvenliği ve temel işlevler için gereklidir.</span>
+                <span><strong className="heading-on-dark">Zorunlu</strong> — Site güvenliği ve temel işlevler için gereklidir.</span>
               </label>
               <label className="flex items-start gap-3">
                 <input type="checkbox" checked={prefs.analytics} onChange={(e) => setPrefs({ ...prefs, analytics: e.target.checked })} className="mt-1" />
-                <span><strong>Analitik</strong> — Ziyaret istatistiklerini anonim olarak toplar.</span>
+                <span><strong className="heading-on-dark">Analitik</strong> — Ziyaret istatistiklerini anonim olarak toplar.</span>
               </label>
               <label className="flex items-start gap-3">
                 <input type="checkbox" checked={prefs.marketing} onChange={(e) => setPrefs({ ...prefs, marketing: e.target.checked })} className="mt-1" />
-                <span><strong>Pazarlama</strong> — Kişiselleştirilmiş içerik ve reklam için kullanılır.</span>
+                <span><strong className="heading-on-dark">Pazarlama</strong> — Kişiselleştirilmiş içerik ve reklam için kullanılır.</span>
               </label>
             </div>
             <div className="flex flex-wrap gap-3 mt-5">
-              <button type="button" onClick={() => save(prefs)} className="px-4 py-2 text-sm bg-blue text-white rounded hover:bg-blue-bright">
+              <button type="button" onClick={() => save(prefs)} className="px-4 py-2 text-sm bg-blue text-white rounded-lg hover:bg-blue-bright">
                 Tercihleri Kaydet
               </button>
-              <button type="button" onClick={() => setShowPrefs(false)} className="px-4 py-2 text-sm border border-navy/20 rounded">
+              <button type="button" onClick={() => setShowPrefs(false)} className="px-4 py-2 text-sm border border-white/15 rounded-lg text-body-on-dark">
                 Geri
               </button>
             </div>

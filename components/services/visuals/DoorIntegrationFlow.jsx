@@ -28,7 +28,7 @@ export default function DoorIntegrationFlow({ steps }) {
                   "w-full md:w-auto flex-1 px-4 py-4 rounded-sm text-center border text-sm font-medium tracking-wide",
                   isHotelio
                     ? "bg-navy border-gold/40 text-gold"
-                    : "bg-white border-navy/10 text-navy"
+                    : "bg-white/5 border-white/10 text-body-on-dark"
                 )}
                 {...props}
               >

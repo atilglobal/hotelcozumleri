@@ -6,10 +6,8 @@ export default function FormTextarea({ className, error, label, required, id, ..
     <textarea
       id={id}
       className={cn(
-        "w-full px-4 py-3 text-navy bg-white border rounded-sm transition-colors resize-y min-h-[120px]",
-        "placeholder:text-gray-light/60",
-        "focus:outline-none focus:ring-2 focus:ring-blue/30 focus:border-blue",
-        error ? "border-red-400" : "border-navy/15",
+        "input-dark resize-y min-h-[120px]",
+        error && "border-red-400 focus:border-red-400 focus:shadow-[0_0_0_3px_rgba(248,113,113,0.12)]",
         className
       )}
       {...props}

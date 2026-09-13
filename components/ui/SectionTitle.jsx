@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import AnimatedText from "./AnimatedText";
+import RevealText from "./RevealText";
 
 export default function SectionTitle({
   eyebrow,
@@ -9,54 +9,50 @@ export default function SectionTitle({
   titleAccent,
   subtitle,
   align = "left",
-  theme = "light",
+  theme = "dark",
   className,
+  index,
 }) {
   const alignClasses = {
     left: "text-left items-start",
     center: "text-center items-center mx-auto",
   };
 
-  const themeClasses = {
-    light: "text-navy",
-    dark: "text-white",
-  };
-
-  const subtitleClasses = {
-    light: "text-gray-light",
-    dark: "text-body-on-dark",
-  };
+  const eyebrowLabel = index ? `${String(index).padStart(2, "0")} / ${eyebrow}` : eyebrow;
 
   return (
     <div className={cn("flex flex-col gap-5 max-w-3xl", alignClasses[align], className)}>
       {eyebrow && (
-        <AnimatedText delay={0}>
-          <span className={cn("pill-eyebrow", theme === "dark" && "pill-eyebrow-dark")}>
-            {eyebrow}
-          </span>
-        </AnimatedText>
+        <span className="pill-eyebrow pill-eyebrow-dark animate-[fade-up_0.5s_var(--transition-premium)_both]">
+          {eyebrowLabel}
+        </span>
       )}
-      <AnimatedText delay={0.1}>
-        <h2 className={cn("text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.08] tracking-tight", theme === "dark" ? "heading-on-dark" : "text-navy")}>
+      <h2
+        className={cn(
+          "text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.08] tracking-tight heading-on-dark",
+          align === "center" && "text-center"
+        )}
+      >
+        <RevealText as="span" className="inline" delay={0.08} split="words">
           {title}
-          {titleAccent && (
-            <>
-              {" "}
-              <span className={theme === "dark" ? "text-gradient-gold" : "text-gradient-blue"}>
+        </RevealText>
+        {titleAccent && (
+          <>
+            {" "}
+            <span className="text-gradient-gold inline-block">
+              <RevealText as="span" className="inline" delay={0.2} split="words">
                 {titleAccent}
-              </span>
-            </>
-          )}
-        </h2>
-      </AnimatedText>
+              </RevealText>
+            </span>
+          </>
+        )}
+      </h2>
       {subtitle && (
-        <AnimatedText delay={0.2}>
-          <p className={cn("text-base md:text-lg leading-relaxed max-w-2xl font-medium", subtitleClasses[theme])}>
-            {subtitle}
-          </p>
-        </AnimatedText>
+        <p className={cn("text-base md:text-lg leading-relaxed max-w-2xl font-medium text-body-on-dark animate-[fade-up_0.6s_var(--transition-premium)_0.15s_both]")}>
+          {subtitle}
+        </p>
       )}
-      <div className={cn("line-accent mt-0", theme === "dark" ? "" : "line-accent-blue", align === "center" && "mx-auto")} />
+      <div className={cn("line-accent mt-0", align === "center" && "mx-auto")} />
     </div>
   );
 }

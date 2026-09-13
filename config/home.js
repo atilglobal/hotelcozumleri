@@ -76,6 +76,13 @@ export const solutionsOverview = {
       image:
         "https://images.unsplash.com/photo-1540555700478-4be289fbbe30?w=800&q=80",
     },
+    {
+      id: "decor",
+      name: "Yapay Çiçek & Dekorasyon",
+      description: "Lobi, bar ve ortak alan dekorasyonu",
+      href: "/cozumler/yapay-cicek-dekorasyon",
+      image: siteImages.solutions.decor,
+    },
   ],
 };
 
@@ -163,6 +170,16 @@ export const servicesShowcase = {
       image: siteImages.solutions.spa,
       size: "large",
     },
+    {
+      id: "decor",
+      title: "Yapay Çiçek & Dekorasyon",
+      description:
+        "Lobi, restoran, bar ve ortak alanlara özel yapay bitki ve dekoratif çiçek uygulamaları.",
+      href: "/cozumler/yapay-cicek-dekorasyon",
+      ctaLabel: "Detayları İncele",
+      image: siteImages.solutions.decor,
+      size: "medium",
+    },
   ],
 };
 
@@ -194,7 +211,12 @@ export const hotelAreas = {
     {
       id: "spa",
       name: "SPA",
-      solutions: ["SPA Kurulumu", "Hotelio SPA Yönetimi"],
+      solutions: ["SPA Kurulumu", "Yapay Çiçek & Dekorasyon", "Hotelio SPA Yönetimi"],
+    },
+    {
+      id: "lobby",
+      name: "Lobi & Ortak Alan",
+      solutions: ["Yapay Çiçek & Dekorasyon", "Dikey Bahçe"],
     },
     {
       id: "management",

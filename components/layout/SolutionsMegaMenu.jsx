@@ -87,14 +87,13 @@ export default function SolutionsMegaMenu({ isLight = false, isActive = false })
           onMouseEnter={openMenu}
           onMouseLeave={closeMenu}
         >
-          <div className="bg-white rounded-sm border border-navy/8 shadow-[0_20px_60px_rgba(10,22,40,0.12)] overflow-hidden">
+          <div className="glass-card-dark rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] overflow-hidden">
             <div className="grid grid-cols-5">
-              {/* Left intro */}
-              <div className="col-span-2 bg-navy p-6 md:p-8">
-                <h3 className="font-display text-xl text-white mb-3 leading-snug">
+              <div className="col-span-2 bg-navy/80 p-6 md:p-8">
+                <h3 className="font-display text-xl heading-on-dark mb-3 leading-snug">
                   {megaMenuSolutions.title}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-6">
+                <p className="text-body-on-dark text-sm leading-relaxed mb-6">
                   {megaMenuSolutions.description}
                 </p>
                 <Link
@@ -106,7 +105,6 @@ export default function SolutionsMegaMenu({ isLight = false, isActive = false })
                 </Link>
               </div>
 
-              {/* Services grid */}
               <div className="col-span-3 p-4 md:p-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
                   {megaMenuSolutions.items.map((item) => (
@@ -114,30 +112,29 @@ export default function SolutionsMegaMenu({ isLight = false, isActive = false })
                       key={item.slug}
                       href={item.href}
                       role="menuitem"
-                      className="group p-3 rounded-sm hover:bg-off-white transition-colors"
+                      className="group p-3 rounded-lg hover:bg-white/5 transition-colors"
                       onClick={() => setOpen(false)}
                     >
-                      <span className="block text-sm font-medium text-navy group-hover:text-blue transition-colors">
+                      <span className="block text-sm font-medium heading-on-dark group-hover:text-gold-light transition-colors">
                         {item.label}
                       </span>
-                      <span className="block text-xs text-gray-light mt-0.5">
+                      <span className="block text-xs text-muted-on-dark mt-0.5">
                         {item.description}
                       </span>
                     </Link>
                   ))}
                 </div>
 
-                {/* Hotelio premium card */}
                 <Link
                   href={megaMenuSolutions.hotelio.href}
                   role="menuitem"
-                  className="mt-4 block p-4 rounded-sm bg-navy border border-gold/20 hover:border-gold/40 transition-colors group"
+                  className="mt-4 block p-4 rounded-lg bg-navy/60 border border-gold/20 hover:border-gold/40 transition-colors group"
                   onClick={() => setOpen(false)}
                 >
                   <span className="text-gold text-xs font-bold tracking-[0.25em]">
                     {megaMenuSolutions.hotelio.label}
                   </span>
-                  <span className="block text-white text-sm mt-1 group-hover:text-gold-light transition-colors">
+                  <span className="block heading-on-dark text-sm mt-1 group-hover:text-gold-light transition-colors">
                     {megaMenuSolutions.hotelio.description}
                   </span>
                   <span className="inline-flex items-center gap-1 text-gold text-xs font-medium mt-2 group-hover:gap-2 transition-all">

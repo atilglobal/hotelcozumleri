@@ -14,7 +14,7 @@ import { formatPhone } from "@/utils/format";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-navy text-white overflow-hidden">
+    <footer className="relative section-dark-a text-white overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,108,244,0.12),transparent_60%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 

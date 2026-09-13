@@ -31,23 +31,29 @@ export default function ServiceCard({
           alt={title}
           fill
           sizes={size === "large" ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 100vw, 33vw"}
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-navy/10 transition-opacity duration-500 group-hover:via-navy/60" />
-        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07101c] via-[#07101c]/55 to-[#07101c]/15 transition-opacity duration-500 group-hover:via-[#07101c]/65" />
+        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl group-hover:ring-gold/25 transition-colors duration-500" />
       </div>
       <div className="relative z-10 flex flex-col justify-end h-full p-6 md:p-8">
-        <span className="inline-flex w-fit items-center gap-1.5 px-3 py-1 mb-3 text-[11px] font-semibold uppercase tracking-wider text-white bg-white/15 backdrop-blur-md rounded-full">
+        <span className="inline-flex w-fit items-center gap-1.5 px-3 py-1 mb-3 text-[11px] font-semibold uppercase tracking-wider text-white bg-white/10 backdrop-blur-md rounded-full border border-white/10">
           {ctaLabel} →
         </span>
-        <h3 className="heading-on-dark text-xl md:text-2xl font-bold mb-2 tracking-tight">{title}</h3>
-        <p className="text-white/85 text-sm md:text-base leading-relaxed max-w-md">{description}</p>
+        <h3 className="heading-on-dark text-xl md:text-2xl font-bold mb-2 tracking-tight group-hover:text-gold-light transition-colors duration-300">
+          {title}
+        </h3>
+        <p className="text-body-on-dark text-sm md:text-base leading-relaxed max-w-md">{description}</p>
       </div>
     </>
   );
 
   const cardClasses = cn(
-    "group relative flex overflow-hidden rounded-2xl h-full min-h-[280px] shadow-[var(--shadow-card)] hover:shadow-[0_20px_60px_rgba(15,23,42,0.2)] transition-shadow duration-500",
+    "group relative flex overflow-hidden rounded-2xl h-full min-h-[280px]",
+    "border border-white/8 bg-white/[0.02]",
+    "shadow-[0_8px_32px_rgba(0,0,0,0.25)]",
+    "hover:shadow-[0_20px_60px_rgba(0,0,0,0.35),0_0_40px_rgba(59,108,244,0.08)]",
+    "hover:-translate-y-1.5 transition-all duration-500",
     sizeClasses[size],
     className
   );
@@ -63,10 +69,10 @@ export default function ServiceCard({
   return (
     <motion.div
       className="h-full"
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.55, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
     >
       <Link href={href} className={cardClasses}>
         {content}

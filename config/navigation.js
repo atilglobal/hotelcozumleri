@@ -17,6 +17,7 @@ export const footerSolutions = [
   { label: "Tekstil", href: "/cozumler/otel-tekstili" },
   { label: "Sarf & Temizlik", href: "/cozumler/sarf-temizlik" },
   { label: "SPA", href: "/cozumler/spa-kurulumu" },
+  { label: "Yapay Çiçek & Dekorasyon", href: "/cozumler/yapay-cicek-dekorasyon" },
 ];
 
 export const footerTedarik = [

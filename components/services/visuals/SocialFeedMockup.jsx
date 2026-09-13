@@ -27,13 +27,13 @@ export default function SocialFeedMockup() {
         return (
           <Wrapper
             key={post.title}
-            className="rounded-sm overflow-hidden border border-navy/10 bg-white shadow-sm"
+            className="rounded-sm overflow-hidden border border-white/10 glass-card-dark"
             {...props}
           >
             <div className={`aspect-square bg-gradient-to-br ${post.color}`} />
             <div className="p-4">
-              <p className="text-sm font-medium text-navy">{post.title}</p>
-              <p className="text-xs text-gray-light mt-1">{post.likes} etkileşim</p>
+              <p className="text-sm font-medium heading-on-dark">{post.title}</p>
+              <p className="text-xs text-muted-on-dark mt-1">{post.likes} etkileşim</p>
             </div>
           </Wrapper>
         );

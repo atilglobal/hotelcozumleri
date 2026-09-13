@@ -21,7 +21,7 @@ export default function HotelioAIOrbitGraphic({ className = "" }) {
         <svg viewBox="0 0 280 280" className="absolute inset-0 w-full h-full" aria-hidden="true">
           <circle cx="140" cy="140" r="118" stroke="rgba(255,255,255,0.08)" strokeWidth="1" strokeDasharray="4 6" fill="none" />
           <circle cx="140" cy="140" r="88" stroke="rgba(212,168,83,0.15)" strokeWidth="1" fill="none" />
-          {nodes.map((node) => (
+          {nodes.map((node, i) => (
             <line
               key={node.label}
               x1="140"
@@ -31,6 +31,11 @@ export default function HotelioAIOrbitGraphic({ className = "" }) {
               stroke="url(#aiOrbitLine)"
               strokeWidth="1"
               opacity="0.45"
+              pathLength="1"
+              strokeDasharray="1"
+              strokeDashoffset="1"
+              className="orbit-connector"
+              style={{ animationDelay: `${i * 0.4}s` }}
             />
           ))}
           <defs>
