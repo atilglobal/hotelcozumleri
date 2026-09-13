@@ -297,4 +297,6 @@ export const finalCta = {
     "Teknolojiden tedarike, dijital çözümlerden operasyonel ihtiyaçlara kadar oteliniz için doğru modeli birlikte oluşturalım.",
   primaryCta: { label: "Teklif Al", href: "/teklif-al" },
   secondaryCta: { label: "Hotelio Demo Talep Et", href: "/hotelio-demo" },
+  image: siteImages.hotel.lobby,
+  imageAlt: "Lüks otel lobisi — uçtan uca otel çözümleri danışmanlığı",
 };

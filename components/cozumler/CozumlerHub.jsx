@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { cozumlerHub, services, serviceSlugs } from "@/config/services";
+import { hubImages } from "@/config/serviceImages";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import AnimatedText from "@/components/ui/AnimatedText";
@@ -57,6 +58,7 @@ export default function CozumlerHub() {
           <div className="space-y-24 md:space-y-32">
             {serviceSlugs.map((slug, index) => {
               const service = services[slug];
+              const visual = hubImages[slug];
               const isReversed = index % 2 === 1;
               const Wrapper = prefersReducedMotion ? "div" : motion.div;
               const props = prefersReducedMotion
@@ -77,14 +79,16 @@ export default function CozumlerHub() {
                   )}
                   {...props}
                 >
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-white/10">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-white/10 bg-[#0a1420]">
                     <Image
-                      src={service.image}
-                      alt={service.hero.eyebrow}
+                      src={visual.image}
+                      alt={visual.alt}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
+                      style={{ objectPosition: visual.objectPosition || "center" }}
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#07101C]/30 to-transparent pointer-events-none" />
                   </div>
                   <div>
                     <span className="text-gold-light text-xs font-semibold tracking-[0.2em] uppercase">

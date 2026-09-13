@@ -7,9 +7,9 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import { solutionsOverview } from "@/config/home";
 import { cn } from "@/utils/cn";
 
-const hubNodes = solutionsOverview.groups.map((g, i) => {
-  const angles = [0, 51, 103, 154, 206, 257, 309];
-  const angle = (angles[i] || i * 51) * (Math.PI / 180);
+const hubNodes = solutionsOverview.groups.map((g, i, arr) => {
+  const count = arr.length;
+  const angle = ((360 / count) * i * Math.PI) / 180;
   const r = 42;
   return {
     ...g,
@@ -79,7 +79,9 @@ export default function SolutionsHub() {
                   node.accent === "gold" && "ring-1 ring-gold/25"
                 )}
               >
-                <span className="text-[10px] md:text-xs font-bold text-white leading-tight">{node.name}</span>
+                <span className="text-[10px] md:text-xs font-bold text-white leading-tight max-w-[130px] md:max-w-[150px]">
+                  {node.name}
+                </span>
               </Link>
             </motion.div>
           ))}

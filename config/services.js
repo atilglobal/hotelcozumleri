@@ -1,4 +1,5 @@
 import { siteImages } from "./images.js";
+import { hubImages } from "./serviceImages.js";
 
 export const serviceSlugs = [
   "otel-web-sitesi",
@@ -81,6 +82,7 @@ export const services = {
     slug: "otel-web-sitesi",
     theme: "digital",
     accent: "blue",
+    customPage: true,
     seo: {
       title: "Otel Web Sitesi Çözümleri",
       description:
@@ -118,17 +120,18 @@ export const services = {
     techNote:
       "İhtiyacınıza göre PHP tabanlı özel yazılım veya WordPress gibi yönetilebilir altyapılar kullanılabilir. Teknik detayları sizinle birlikte en doğru seçeneğe göre belirleriz.",
     cta: {
-      title: "Oteliniz İçin Web Sitesi Teklifi Al",
+      title: "Oteliniz İçin Web Projesi Başlatalım",
       href: "/teklif-al?hizmet=otel-web-sitesi",
     },
     related: ["hotelio", "sosyal-medya"],
-    image: "/images/services/web/hero.svg",
+    image: hubImages["otel-web-sitesi"].image,
     hubBenefits: ["Rezervasyon odaklı yapı", "SEO altyapısı", "Hotelio entegrasyonu", "Mobil uyum"],
   },
   "sosyal-medya": {
     slug: "sosyal-medya",
     theme: "creative",
     accent: "blue-bright",
+    customPage: true,
     seo: {
       title: "Otel Sosyal Medya Yönetimi",
       description:
@@ -162,17 +165,18 @@ export const services = {
       "Performans analizi",
     ],
     cta: {
-      title: "Sosyal Medya Teklifi Al",
+      title: "Otelinizin Dijital Görünürlüğünü Güçlendirelim",
       href: "/teklif-al?hizmet=sosyal-medya",
     },
     related: ["otel-web-sitesi", "hotelio"],
-    image: "/images/services/social/hero.svg",
+    image: hubImages["sosyal-medya"].image,
     hubBenefits: ["İçerik stratejisi", "Reklam yönetimi", "Marka dili", "Performans raporu"],
   },
   "kapi-sistemleri": {
     slug: "kapi-sistemleri",
     theme: "security",
     accent: "navy",
+    customPage: true,
     seo: {
       title: "Otel Kapı ve Mifare Sistemleri",
       description:
@@ -207,17 +211,18 @@ export const services = {
     ],
     integrationFlow: ["Misafir", "Resepsiyon", "HOTELIO", "Oda Kartı", "Güvenli Erişim"],
     cta: {
-      title: "Kapı Sistemi Teklifi Al",
+      title: "Kapı Sisteminizi Birlikte Planlayalım",
       href: "/teklif-al?hizmet=kapi-sistemleri",
     },
-    related: ["hotelio", "otel-web-sitesi"],
-    image: "/images/services/doors/hero.svg",
+    related: ["hotelio"],
+    image: hubImages["kapi-sistemleri"].image,
     hubBenefits: ["Yangın kapıları", "Mifare sistemler", "Erişim kontrolü", "Hotelio uyumu"],
   },
   "otel-tekstili": {
     slug: "otel-tekstili",
     theme: "comfort",
     accent: "gold",
+    customPage: true,
     seo: {
       title: "Otel Tekstili ve Logolu Otel Ürünleri",
       description:
@@ -245,18 +250,19 @@ export const services = {
       "E-ticaret entegrasyonuna hazır yapı",
     ],
     cta: {
-      title: "Tekstil Teklifi Al",
+      title: "Tekstil Teklifi Alın",
       href: "/teklif-al?hizmet=otel-tekstili",
-      secondary: { label: "Ürünleri İncele", href: "/urunler" },
+      secondary: { label: "Tedarik Merkezi", href: "/tedarik" },
     },
-    related: ["sarf-temizlik", "spa-kurulumu"],
-    image: "/images/services/textile/hero.svg",
+    related: ["tedarik", "yapay-cicek-dekorasyon"],
+    image: hubImages["otel-tekstili"].image,
     hubBenefits: ["Logo nakış uygulaması", "Premium kumaş", "Toplu tedarik", "Marka uyumu"],
   },
   "sarf-temizlik": {
     slug: "sarf-temizlik",
     theme: "hygiene",
     accent: "ice",
+    customPage: true,
     seo: {
       title: "Otel Temizlik ve Sarf Malzemeleri",
       description:
@@ -315,18 +321,19 @@ export const services = {
       },
     },
     cta: {
-      title: "Toplu Alım Teklifi Al",
+      title: "Toplu Tedarik Teklifi Al",
       href: "/teklif-al?hizmet=sarf-temizlik",
-      secondary: { label: "Ürünleri İncele", href: "/urunler" },
+      secondary: { label: "Tedarik Merkezi", href: "/tedarik" },
     },
     related: ["otel-tekstili", "spa-kurulumu"],
-    image: "/images/services/cleaning/hero.svg",
+    image: hubImages["sarf-temizlik"].image,
     hubBenefits: ["Alan bazlı tedarik", "Endüstriyel kimyasallar", "Havuz bakım", "Toplu alım"],
   },
   "spa-kurulumu": {
     slug: "spa-kurulumu",
     theme: "luxury",
     accent: "gold",
+    customPage: true,
     seo: {
       title: "Anahtar Teslim Otel SPA Kurulumu",
       description:
@@ -361,11 +368,11 @@ export const services = {
       "Wellness alanları",
     ],
     cta: {
-      title: "SPA Projeniz İçin Görüşelim",
+      title: "SPA Projenizi Konuşalım",
       href: "/teklif-al?hizmet=spa-kurulumu",
     },
-    related: ["yapay-cicek-dekorasyon", "sarf-temizlik"],
-    image: "/images/services/spa/hero.svg",
+    related: ["yapay-cicek-dekorasyon", "hotelio"],
+    image: hubImages["spa-kurulumu"].image,
     hubBenefits: ["Anahtar teslim kurulum", "Özel proje tasarımı", "Premium ekipman", "7 adımlı süreç"],
   },
   "yapay-cicek-dekorasyon": {
@@ -401,11 +408,17 @@ export const services = {
       secondary: { label: "Uygulama Alanlarını Keşfet", href: "#uygulama-alanlari" },
     },
     related: ["spa-kurulumu", "otel-tekstili", "sarf-temizlik"],
-    image: siteImages.solutions.decor,
+    image: hubImages["yapay-cicek-dekorasyon"].image,
   },
 };
 
 export const relatedServiceMap = {
+  tedarik: {
+    slug: "tedarik",
+    label: "Tedarik Merkezi",
+    description: "Toplu ürün ve ekipman tedarik talebi",
+    href: "/tedarik",
+  },
   hotelio: {
     slug: "hotelio",
     label: "HOTELIO",

@@ -18,7 +18,7 @@ export default function RelatedServices({ services }) {
       <Container className="relative z-10">
         <AnimatedText>
           <h2 className="font-display text-2xl md:text-3xl heading-on-dark mb-2">
-            Bu Çözümü Tamamlayan Hizmetler
+            Bu Hizmeti Tamamlayan Çözümler
           </h2>
           <p className="text-body-on-dark mb-10 max-w-xl">
             Otelinizin ihtiyaçlarını bütüncül düşünerek birlikte değer üreten çözümler.

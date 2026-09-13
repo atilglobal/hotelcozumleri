@@ -25,14 +25,9 @@ export default function Logo({ variant = "dark", className }) {
           <circle cx="12" cy="9.5" r="1.5" fill="#d4a853" />
         </svg>
       </div>
-      <div className="flex flex-col leading-tight">
-        <span className={cn("text-base font-bold tracking-tight", isLight ? "text-white" : "text-navy")}>
-          Hotel Çözümleri
-        </span>
-        <span className={cn("text-[10px] font-medium tracking-widest uppercase", isLight ? "text-white/50" : "text-gray-light")}>
-          Premium Solutions
-        </span>
-      </div>
+      <span className={cn("text-base font-bold tracking-tight leading-tight", isLight ? "text-white" : "text-navy")}>
+        Hotel Çözümleri
+      </span>
     </Link>
   );
 }

@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "home",
+    "path": "/",
+    "label": "Ana Sayfa",
+    "section": "ana",
+    "sectionTitle": "Ana Sayfa",
+    "hero": "/preview/home-hero.png",
+    "full": "/preview/home-full.png",
+    "live": "/"
+  },
+  {
+    "slug": "cozumler",
+    "path": "/cozumler",
+    "label": "Çözümler Hub",
+    "section": "cozumler",
+    "sectionTitle": "Çözümler",
+    "hero": "/preview/cozumler-hero.png",
+    "full": "/preview/cozumler-full.png",
+    "live": "/cozumler"
+  },
+  {
+    "slug": "otel-web-sitesi",
+    "path": "/cozumler/otel-web-sitesi",
+    "label": "Otel Web Sitesi",
+    "section": "cozumler",
+    "sectionTitle": "Çözümler",
+    "hero": "/preview/otel-web-sitesi-hero.png",
+    "full": "/preview/otel-web-sitesi-full.png",
+    "live": "/cozumler/otel-web-sitesi"
+  },
+  {
+    "slug": "sosyal-medya",
+    "path": "/cozumler/sosyal-medya",
+    "label": "Sosyal Medya",
+    "section": "cozumler",
+    "sectionTitle": "Çözümler",
+    "hero": "/preview/sosyal-medya-hero.png",
+    "full": "/preview/sosyal-medya-full.png",
+    "live": "/cozumler/sosyal-medya"
+  },
+  {
+    "slug": "kapi-sistemleri",
+    "path": "/cozumler/kapi-sistemleri",
+    "label": "Kapı Sistemleri",
+    "section": "cozumler",
+    "sectionTitle": "Çözümler",
+    "hero": "/preview/kapi-sistemleri-hero.png",
+    "full": "/preview/kapi-sistemleri-full.png",
+    "live": "/cozumler/kapi-sistemleri"
+  },
+  {
+    "slug": "otel-tekstili",
+    "path": "/cozumler/otel-tekstili",
+    "label": "Otel Tekstili",
+    "section": "cozumler",
+    "sectionTitle": "Çözümler",
+    "hero": "/preview/otel-tekstili-hero.png",
+    "full": "/preview/otel-tekstili-full.png",
+    "live": "/cozumler/otel-tekstili"
+  },
+  {
+    "slug": "sarf-temizlik",
+    "path": "/cozumler/sarf-temizlik",
+    "label": "Sarf & Temizlik",
+    "section": "cozumler",
+    "sectionTitle": "Çözümler",
+    "hero": "/preview/sarf-temizlik-hero.png",
+    "full": "/preview/sarf-temizlik-full.png",
+    "live": "/cozumler/sarf-temizlik"
+  },
+  {
+    "slug": "spa-kurulumu",
+    "path": "/cozumler/spa-kurulumu",
+    "label": "SPA Kurulumu",
+    "section": "cozumler",
+    "sectionTitle": "Çözümler",
+    "hero": "/preview/spa-kurulumu-hero.png",
+    "full": "/preview/spa-kurulumu-full.png",
+    "live": "/cozumler/spa-kurulumu"
+  },
+  {
+    "slug": "yapay-cicek-dekorasyon",
+    "path": "/cozumler/yapay-cicek-dekorasyon",
+    "label": "Yapay Çiçek & Dekorasyon",
+    "section": "cozumler",
+    "sectionTitle": "Çözümler",
+    "hero": "/preview/yapay-cicek-dekorasyon-hero.png",
+    "full": "/preview/yapay-cicek-dekorasyon-full.png",
+    "live": "/cozumler/yapay-cicek-dekorasyon"
+  },
+  {
+    "slug": "hotelio",
+    "path": "/hotelio",
+    "label": "Hotelio Landing",
+    "section": "hotelio",
+    "sectionTitle": "Hotelio",
+    "hero": "/preview/hotelio-hero.png",
+    "full": "/preview/hotelio-full.png",
+    "live": "/hotelio"
+  },
+  {
+    "slug": "hotelio-moduller",
+    "path": "/hotelio/moduller",
+    "label": "Hotelio Modüller",
+    "section": "hotelio",
+    "sectionTitle": "Hotelio",
+    "hero": "/preview/hotelio-moduller-hero.png",
+    "full": "/preview/hotelio-moduller-full.png",
+    "live": "/hotelio/moduller"
+  },
+  {
+    "slug": "tedarik",
+    "path": "/tedarik",
+    "label": "Tedarik Merkezi",
+    "section": "tedarik",
+    "sectionTitle": "Tedarik",
+    "hero": "/preview/tedarik-hero.png",
+    "full": "/preview/tedarik-full.png",
+    "live": "/tedarik"
+  },
+  {
+    "slug": "hakkimizda",
+    "path": "/hakkimizda",
+    "label": "Hakkımızda",
+    "section": "kurumsal",
+    "sectionTitle": "Kurumsal & Form",
+    "hero": "/preview/hakkimizda-hero.png",
+    "full": "/preview/hakkimizda-full.png",
+    "live": "/hakkimizda"
+  },
+  {
+    "slug": "projeler",
+    "path": "/projeler",
+    "label": "Projeler",
+    "section": "kurumsal",
+    "sectionTitle": "Kurumsal & Form",
+    "hero": "/preview/projeler-hero.png",
+    "full": "/preview/projeler-full.png",
+    "live": "/projeler"
+  },
+  {
+    "slug": "blog",
+    "path": "/blog",
+    "label": "Blog",
+    "section": "kurumsal",
+    "sectionTitle": "Kurumsal & Form",
+    "hero": "/preview/blog-hero.png",
+    "full": "/preview/blog-full.png",
+    "live": "/blog"
+  },
+  {
+    "slug": "iletisim",
+    "path": "/iletisim",
+    "label": "İletişim",
+    "section": "kurumsal",
+    "sectionTitle": "Kurumsal & Form",
+    "hero": "/preview/iletisim-hero.png",
+    "full": "/preview/iletisim-full.png",
+    "live": "/iletisim"
+  },
+  {
+    "slug": "teklif-al",
+    "path": "/teklif-al",
+    "label": "Teklif Al",
+    "section": "kurumsal",
+    "sectionTitle": "Kurumsal & Form",
+    "hero": "/preview/teklif-al-hero.png",
+    "full": "/preview/teklif-al-full.png",
+    "live": "/teklif-al"
+  },
+  {
+    "slug": "hotelio-demo",
+    "path": "/hotelio-demo",
+    "label": "Hotelio Demo",
+    "section": "kurumsal",
+    "sectionTitle": "Kurumsal & Form",
+    "hero": "/preview/hotelio-demo-hero.png",
+    "full": "/preview/hotelio-demo-full.png",
+    "live": "/hotelio-demo"
+  }
+]

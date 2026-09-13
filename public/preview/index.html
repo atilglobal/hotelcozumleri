@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Çözümleri — Site Önizleme</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Segoe UI", system-ui, sans-serif; background: #07101C; color: #e2e8f0; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(7,16,28,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1rem 1.5rem; }
+    header h1 { font-size: 1.25rem; font-weight: 600; }
+    header p { font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+    nav a { font-size: 0.75rem; padding: 0.35rem 0.75rem; border-radius: 999px; background: rgba(255,255,255,0.06); color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.08); }
+    nav a:hover { border-color: rgba(201,169,98,0.5); color: #c9a962; }
+    main { max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
+    section { margin-bottom: 3rem; }
+    section > h2 { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: #c9a962; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .page { background: #0f1a2e; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; margin-bottom: 1.5rem; overflow: hidden; }
+    .page-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 1rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .page-head h3 { font-size: 1rem; font-weight: 600; }
+    .page-head .path { font-size: 0.75rem; color: #64748b; font-family: monospace; }
+    .actions { display: flex; gap: 0.5rem; }
+    .actions a, .actions button { font-size: 0.75rem; padding: 0.4rem 0.85rem; border-radius: 6px; cursor: pointer; text-decoration: none; border: 1px solid rgba(255,255,255,0.12); background: transparent; color: #e2e8f0; }
+    .actions a.primary { background: #c9a962; color: #07101C; border-color: #c9a962; font-weight: 600; }
+    .actions button.active { background: rgba(201,169,98,0.15); border-color: #c9a962; color: #c9a962; }
+    .preview-wrap { background: #050a12; max-height: 70vh; overflow: auto; }
+    .preview-wrap img { width: 100%; display: block; }
+    .preview-wrap.hero img { max-height: 500px; object-fit: cover; object-position: top; }
+    footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.06); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hotel Çözümleri — Komple Site Önizleme</h1>
+    <p>18 sayfa · Hero + tam sayfa görüntüleri · Canlı siteye tek tıkla geç</p>
+    <nav>
+      <a href="#ana">Ana Sayfa</a><a href="#cozumler">Çözümler</a><a href="#hotelio">Hotelio</a><a href="#tedarik">Tedarik</a><a href="#kurumsal">Kurumsal & Form</a>
+    </nav>
+  </header>
+  <main>
+    <section id="ana"><h2>Ana Sayfa</h2>
+        <article class="page" data-slug="home">
+          <div class="page-head">
+            <div><h3>Ana Sayfa</h3><div class="path">/</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/home-hero.png" alt="Ana Sayfa hero" data-hero="/preview/home-hero.png" data-full="/preview/home-full.png" />
+          </div>
+        </article></section><section id="cozumler"><h2>Çözümler</h2>
+        <article class="page" data-slug="cozumler">
+          <div class="page-head">
+            <div><h3>Çözümler Hub</h3><div class="path">/cozumler</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/cozumler" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/cozumler-hero.png" alt="Çözümler Hub hero" data-hero="/preview/cozumler-hero.png" data-full="/preview/cozumler-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="otel-web-sitesi">
+          <div class="page-head">
+            <div><h3>Otel Web Sitesi</h3><div class="path">/cozumler/otel-web-sitesi</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/cozumler/otel-web-sitesi" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/otel-web-sitesi-hero.png" alt="Otel Web Sitesi hero" data-hero="/preview/otel-web-sitesi-hero.png" data-full="/preview/otel-web-sitesi-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="sosyal-medya">
+          <div class="page-head">
+            <div><h3>Sosyal Medya</h3><div class="path">/cozumler/sosyal-medya</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/cozumler/sosyal-medya" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/sosyal-medya-hero.png" alt="Sosyal Medya hero" data-hero="/preview/sosyal-medya-hero.png" data-full="/preview/sosyal-medya-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="kapi-sistemleri">
+          <div class="page-head">
+            <div><h3>Kapı Sistemleri</h3><div class="path">/cozumler/kapi-sistemleri</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/cozumler/kapi-sistemleri" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/kapi-sistemleri-hero.png" alt="Kapı Sistemleri hero" data-hero="/preview/kapi-sistemleri-hero.png" data-full="/preview/kapi-sistemleri-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="otel-tekstili">
+          <div class="page-head">
+            <div><h3>Otel Tekstili</h3><div class="path">/cozumler/otel-tekstili</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/cozumler/otel-tekstili" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/otel-tekstili-hero.png" alt="Otel Tekstili hero" data-hero="/preview/otel-tekstili-hero.png" data-full="/preview/otel-tekstili-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="sarf-temizlik">
+          <div class="page-head">
+            <div><h3>Sarf & Temizlik</h3><div class="path">/cozumler/sarf-temizlik</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/cozumler/sarf-temizlik" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/sarf-temizlik-hero.png" alt="Sarf & Temizlik hero" data-hero="/preview/sarf-temizlik-hero.png" data-full="/preview/sarf-temizlik-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="spa-kurulumu">
+          <div class="page-head">
+            <div><h3>SPA Kurulumu</h3><div class="path">/cozumler/spa-kurulumu</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/cozumler/spa-kurulumu" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/spa-kurulumu-hero.png" alt="SPA Kurulumu hero" data-hero="/preview/spa-kurulumu-hero.png" data-full="/preview/spa-kurulumu-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="yapay-cicek-dekorasyon">
+          <div class="page-head">
+            <div><h3>Yapay Çiçek & Dekorasyon</h3><div class="path">/cozumler/yapay-cicek-dekorasyon</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/cozumler/yapay-cicek-dekorasyon" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/yapay-cicek-dekorasyon-hero.png" alt="Yapay Çiçek & Dekorasyon hero" data-hero="/preview/yapay-cicek-dekorasyon-hero.png" data-full="/preview/yapay-cicek-dekorasyon-full.png" />
+          </div>
+        </article></section><section id="hotelio"><h2>Hotelio</h2>
+        <article class="page" data-slug="hotelio">
+          <div class="page-head">
+            <div><h3>Hotelio Landing</h3><div class="path">/hotelio</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/hotelio" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/hotelio-hero.png" alt="Hotelio Landing hero" data-hero="/preview/hotelio-hero.png" data-full="/preview/hotelio-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="hotelio-moduller">
+          <div class="page-head">
+            <div><h3>Hotelio Modüller</h3><div class="path">/hotelio/moduller</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/hotelio/moduller" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/hotelio-moduller-hero.png" alt="Hotelio Modüller hero" data-hero="/preview/hotelio-moduller-hero.png" data-full="/preview/hotelio-moduller-full.png" />
+          </div>
+        </article></section><section id="tedarik"><h2>Tedarik</h2>
+        <article class="page" data-slug="tedarik">
+          <div class="page-head">
+            <div><h3>Tedarik Merkezi</h3><div class="path">/tedarik</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/tedarik" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/tedarik-hero.png" alt="Tedarik Merkezi hero" data-hero="/preview/tedarik-hero.png" data-full="/preview/tedarik-full.png" />
+          </div>
+        </article></section><section id="kurumsal"><h2>Kurumsal & Form</h2>
+        <article class="page" data-slug="hakkimizda">
+          <div class="page-head">
+            <div><h3>Hakkımızda</h3><div class="path">/hakkimizda</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/hakkimizda" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/hakkimizda-hero.png" alt="Hakkımızda hero" data-hero="/preview/hakkimizda-hero.png" data-full="/preview/hakkimizda-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="projeler">
+          <div class="page-head">
+            <div><h3>Projeler</h3><div class="path">/projeler</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/projeler" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/projeler-hero.png" alt="Projeler hero" data-hero="/preview/projeler-hero.png" data-full="/preview/projeler-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="blog">
+          <div class="page-head">
+            <div><h3>Blog</h3><div class="path">/blog</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/blog" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/blog-hero.png" alt="Blog hero" data-hero="/preview/blog-hero.png" data-full="/preview/blog-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="iletisim">
+          <div class="page-head">
+            <div><h3>İletişim</h3><div class="path">/iletisim</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/iletisim" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/iletisim-hero.png" alt="İletişim hero" data-hero="/preview/iletisim-hero.png" data-full="/preview/iletisim-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="teklif-al">
+          <div class="page-head">
+            <div><h3>Teklif Al</h3><div class="path">/teklif-al</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/teklif-al" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/teklif-al-hero.png" alt="Teklif Al hero" data-hero="/preview/teklif-al-hero.png" data-full="/preview/teklif-al-full.png" />
+          </div>
+        </article>
+        <article class="page" data-slug="hotelio-demo">
+          <div class="page-head">
+            <div><h3>Hotelio Demo</h3><div class="path">/hotelio-demo</div></div>
+            <div class="actions">
+              <button type="button" class="toggle active" data-mode="hero">Hero</button>
+              <button type="button" class="toggle" data-mode="full">Tam Sayfa</button>
+              <a class="primary" href="/hotelio-demo" target="_blank" rel="noopener">Canlı Aç →</a>
+            </div>
+          </div>
+          <div class="preview-wrap hero">
+            <img src="/preview/hotelio-demo-hero.png" alt="Hotelio Demo hero" data-hero="/preview/hotelio-demo-hero.png" data-full="/preview/hotelio-demo-full.png" />
+          </div>
+        </article></section>
+  </main>
+  <footer>Önizleme localhost:3001 üzerinde oluşturuldu · 13.09.2026 22:12:18</footer>
+  <script>
+    document.querySelectorAll(".page").forEach((page) => {
+      const img = page.querySelector("img");
+      const wrap = page.querySelector(".preview-wrap");
+      page.querySelectorAll(".toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          page.querySelectorAll(".toggle").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const mode = btn.dataset.mode;
+          img.src = mode === "full" ? img.dataset.full : img.dataset.hero;
+          wrap.classList.toggle("hero", mode === "hero");
+        });
+      });
+    });
+  </script>
+</body>
+</html>

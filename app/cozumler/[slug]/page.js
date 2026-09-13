@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import ServicePage from "@/components/services/ServicePage";
-import DecorServicePage from "@/components/services/decor/DecorServicePage";
+import { getServicePageComponent } from "@/lib/servicePageRegistry";
 import { getService, serviceSlugs } from "@/config/services";
 import { createMetadata } from "@/lib/metadata";
 
@@ -28,8 +28,9 @@ export default async function CozumDetayPage({ params }) {
     notFound();
   }
 
-  if (service.customPage) {
-    return <DecorServicePage service={service} />;
+  const CustomPage = getServicePageComponent(slug);
+  if (service.customPage && CustomPage) {
+    return <CustomPage service={service} />;
   }
 
   return <ServicePage service={service} />;

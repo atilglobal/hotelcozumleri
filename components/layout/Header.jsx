@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 pt-3 md:pt-4 pointer-events-none">
+      <header className="fixed top-0 left-0 right-0 z-[100] px-4 md:px-6 pt-3 md:pt-4 pointer-events-none">
         <div
           className={cn(
             "mx-auto max-w-[var(--container-max)] pointer-events-auto transition-all duration-500 glass-header rounded-2xl px-4 md:px-6",
